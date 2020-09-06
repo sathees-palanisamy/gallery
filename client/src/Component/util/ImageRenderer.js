@@ -1,5 +1,7 @@
 import React from 'react';
 import { useStep } from 'react-hooks-helper';
+import ImageNav from './ImageNav';
+import Progress from './Progress';
 
 const ImageRenderer = ({ initialStep, images }) => {
   const { step, navigation, index, isPaused, autoAdvanceDuration } = useStep({
@@ -12,6 +14,13 @@ const ImageRenderer = ({ initialStep, images }) => {
   return (
     <div className="imageRenderer">
       <img alt={alt} src={src} />
+      <ImageNav
+        isPaused={isPaused}
+        index={index}
+        count={images.length}
+        {...navigation}
+      />
+      {!isPaused && <Progress step={index} duration={autoAdvanceDuration} />}
     </div>
   );
 };

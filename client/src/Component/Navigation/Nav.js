@@ -18,23 +18,24 @@ class Nav extends Component {
             <nav>
                   <ul className="main-nav">
                      <li>
-                     <a href="#" >Sign in</a>
+                     <i className="ion-ios-home icon-small "></i>
+                      <a href="/" >Home</a>
                      </li>
                      <li>
-                     <i className="ion-ios-home icon-small "></i>
-                      <a href="#about" >Home</a>
+                     <i className="ion-ios-photos icon-small "></i>
+                      <a href="/shop" >Shop</a>
                      </li>
                      <li>
                      <i className="ion-ios-pricetag icon-small "></i>
-                      <a href="#about" >Orders</a>
+                      <a href="/orders" >Orders</a>
                      </li>
                      <li>
                        <i className="ion-ios-basket icon-small"></i>
-                       <a href="#testimonals" >Basket</a>
+                       <a href="/basket" >Basket</a>
                      </li>
                      <li>
                       <i className="ion-ios-call icon-small"></i>
-                       <a href="#contact" >Contact Us</a>
+                       <a href="/contact" >Contact Us</a>
                      </li>
                   </ul>
            </nav>

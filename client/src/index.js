@@ -1,14 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {BrowserRouter as Router, Route } from "react-router-dom"; 
+import {BrowserRouter, Route } from "react-router-dom"; 
 import * as serviceWorker from './serviceWorker';
+import Root from './Root';
+
+//axios.defaults.baseURL = 'http://localhost:5000';
 
 ReactDOM.render(
-        <Router>
-            <Route component={App} />
-        </Router>, 
-    document.getElementById('root'));
+    <Root>
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+    </Root>
+    , document.getElementById('root'));
 
 
 serviceWorker.unregister();

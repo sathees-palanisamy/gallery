@@ -28,7 +28,7 @@ class Home extends Component {
           </div>
           <div>
             <h2>Welcome to our Gallery</h2>
-            <p class="long-copy">Tanjore paintings are made by skilled artisans with lot of dedication, which last for many generations. Our Tanjore painting are adorning the walls of pooja rooms,receptions,offices and are gifted to family & friends on special occassions. </p>
+            <p class="long-copy">Tanjore paintings are made by skilled artisans with lot of dedication, which last for many generations. Our Tanjore painting are adorning the walls of pooja rooms, receptions, offices and are gifted to family & friends on special occassions. </p>
             <br></br>
             <div class="long-copy">
             <ul>
@@ -94,7 +94,7 @@ class Home extends Component {
                     &nbsp;
                 </div>
                   <h4 class="card__heading card__heading-span--3">
-                    <span>Other</span>
+                    <span>Others</span>
                   </h4>
                   <div class="card__details">
                     <ul>

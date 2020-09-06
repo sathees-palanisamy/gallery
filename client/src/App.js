@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import Nav from './Component/Navigation/Nav';
 import Home from './Component/Home/Home';
 import SideDrawer from './Component/Navigation/sideDrawer';
-
+import Shop from './Component/Shop/Shop';
+import Orders from './Component/Orders/Orders';
+import Basket from './Component/Basket/Basket';
+import Contact from './Component/Contact/Contact';
+import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -44,7 +48,36 @@ class App extends Component {
           gralleryClick={this.gralleryClick}
           backDropToggle={this.backDropToggle}
         />
-        <Home />
+         <Switch>
+          <Route path="/" exact render={(props) =>
+            <Home
+            />
+          }
+          />
+          <Route path="/shop" render={(props) =>
+            <Shop
+            />
+          }
+          />
+          <Route path="/orders" render={(props) =>
+            <Orders
+              {...props}
+            />
+          }
+          />
+          <Route path="/basket" render={(props) =>
+            <Basket
+              {...props}
+            />
+          }
+          />
+          <Route path="/contact" render={(props) =>
+            <Contact
+              {...props}
+            />
+          }
+          />
+        </Switch>
       </>
     );
   }
