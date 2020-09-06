@@ -26,16 +26,16 @@ class Nav extends Component {
                       <a href="/shop" >Shop</a>
                      </li>
                      <li>
-                     <i className="ion-ios-pricetag icon-small "></i>
-                      <a href="/orders" >Orders</a>
+                     <i className="ion-ios-car icon-small "></i>
+                      <a href="/shipping" >Shipping</a>
                      </li>
                      <li>
-                       <i className="ion-ios-basket icon-small"></i>
-                       <a href="/basket" >Basket</a>
+                     <i className="ion-ios-pricetag icon-small "></i>
+                      <a href="/about" >About</a>
                      </li>
                      <li>
                       <i className="ion-ios-call icon-small"></i>
-                       <a href="/contact" >Contact Us</a>
+                       <a href="/contact" >Contact</a>
                      </li>
                   </ul>
            </nav>

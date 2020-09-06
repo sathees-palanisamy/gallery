@@ -3,8 +3,8 @@ import Nav from './Component/Navigation/Nav';
 import Home from './Component/Home/Home';
 import SideDrawer from './Component/Navigation/sideDrawer';
 import Shop from './Component/Shop/Shop';
-import Orders from './Component/Orders/Orders';
-import Basket from './Component/Basket/Basket';
+import About from './Component/About/About';
+import Shipping from './Component/Shipping/Shipping';
 import Contact from './Component/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
 
@@ -59,14 +59,14 @@ class App extends Component {
             />
           }
           />
-          <Route path="/orders" render={(props) =>
-            <Orders
+          <Route path="/shipping" render={(props) =>
+            <Shipping
               {...props}
             />
           }
           />
-          <Route path="/basket" render={(props) =>
-            <Basket
+          <Route path="/about" render={(props) =>
+            <About
               {...props}
             />
           }

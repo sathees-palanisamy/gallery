@@ -135,6 +135,7 @@
   margin-right: 2rem;
   fill: currentColor;
 }
+
 @media only screen and (max-width: 37.5em) {
   .side-nav1__icon {
     margin-right: 0;
@@ -145,11 +146,12 @@
 }
 
 .legal {
-  font-size: 1.2rem;
+  font-size: 0.8rem;
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
 }
+
 @media only screen and (max-width: 56.25em) {
   .legal {
     display: none;

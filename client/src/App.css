@@ -596,6 +596,7 @@ input[type=checkbox] {
   background-color: white;
 }
 
+
 .Backdrop {
   width: 80%;
   height: 70%;
@@ -635,142 +636,6 @@ input[type=checkbox] {
 }
 
 
-@media only screen and (max-width: 1200px) {
-
-h1 {
-  padding: 2px 5px 5px 25px;
-}
-
-.main-nav {
-  margin:12px 25px 0 0;
-}
-
-.app-screen {
-  padding-top: 20px;
-  height: 40vw;
-  margin-left: 40px;
-  width: 75%;
-}
-
-.contact-detail {
-  font-size: 90%;
-}
-
-  
-}
-
-
-/* Small tablet to big tablet: from 768px to 1023px */
-@media only screen and (max-width: 1025px) {
-
-
-h1 {
-  color: #fff;
-  font-size: 110%;
-  letter-spacing: 1px;
-  float: left;
-  margin: 0 0;
-  word-spacing: 0.5px;
-  padding: 1px 3px 3px 25px;
-}
-
-.long-copy {
-  line-height: 110%;
-  width: 100%;
-  margin-left: 3%;
-}
-
-.main-nav {
-  margin:5px 5px 0 0;
-}
-
-.main-nav li {
-  display: inline-block;
-  margin-left: 20px;
-  color: #fff;
-}
-
-.main-nav li a:link,
-.main-nav li a:visited {
-  padding: 8px 0;
-  color: #fff;
-  text-decoration: none;
-  font-size: 90%;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: border-bottom 0.2s;
-  transition: border-bottom 0.2s;
-}
-
-.main-nav li a:hover,
-.main-nav li a:active {
-  border-bottom: 2px solid #e67e22;
-}
-
-.logo {
-  height: 25px;
-  border-radius: 20%;
-  margin: 3px 0 3px 10px;
-  width: auto;
-  float: left;
-}
-
-h2:after {
-  display: block;
-  height: 2px;
-  background-color: #e67e22;
-  content: " ";
-  width: 25px;
-  margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-.imageRenderer {
-  width: 40vw;
-  height: 25vw;
-}
-
-.imageRenderer img {
-  width: 100%;
-  height: 100%;
-}
-
-.imageGallery {
-  padding-top: 1px;
-  height: 108vw;
-}
-
-.imageGallery img {
-  height: 40rem;
-  width: 28rem;
-}
-
-.app-screen {
-  padding-top: 40px;
-  height: 52vw;
-  margin-left: 30px;
-  width: 75%;
-}
-
-.contact-detail {
-  font-size: 65%;
-}
-
-.gallery-photo img {
-  width: 19vw;
-  height: 32vw;
-  text-align: center;
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
-  -webkit-transition: -webkit-transform 0.9s, opacity 0.9s;
-  transition: transform 0.9s, opacity 0.9s;
-}
-
-  
-}
-
-
 /* Gallery */
 .section-gallery {
   background-size: cover;
@@ -791,10 +656,8 @@ h2:after {
 }
 
 .gallery-photo img {
-  background-position:center;
-  text-align: center;
   opacity: 0.9;
-  width: 30vw;
+  width: 19vw;
   height: 25vw;
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
@@ -809,6 +672,265 @@ h2:after {
   -ms-transform: scale(1.15);
   transform: scale(1.15);
 }
+
+/* About */
+
+.section-steps {
+  margin: 0 0;
+  padding: 5px 5px;
+}
+
+.steps-box {
+  margin-top: 30px;
+  padding-right: 3%;
+}
+
+.app-screen {
+  margin-left: 90px;
+  width: 75%;
+  height: auto;
+}
+
+.works-step div {
+  margin-bottom: 50px;
+  color: #e67e22;
+  font-size: 150%;
+  height: 54px;
+  width: 54px;
+  border: 2px solid #e67e22;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-right: 25px;
+  float: left;
+  padding: 5px;
+}
+
+.mobileflex{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-detail2{
+  padding-left: 30%;
+}
+
+/* Testimonals */
+
+.section-testimonials {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./backq.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./backq.jpg);
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+.blockquote1 {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.blockquote1:before {
+  content: "\201C";
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+.cite1 {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+.cite1img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+.whatsupplink{
+  display: table; 
+  font-family: sans-serif; 
+  text-decoration: none; 
+  margin: 1em auto; 
+  color: #fff; 
+  font-size: 0.9em; 
+  padding: 0.5em 2em 1em 3.5em; 
+  border-radius: 2em; 
+  font-weight: bold; 
+  background: #25d366 url('https://tochat.be/click-to-chat-directory/css/whatsapp.svg') no-repeat 1.5em center; 
+  background-size: 1.6em;
+}
+
+
+input[type=submit] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+input[type=submit] {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+input[type=submit]:hover,
+input[type=submit]:active {
+  background-color: #cf6d17;
+}
+
+.textcolor1{
+  color: #FFF,
+}
+
+@media only screen and (max-width: 1200px) {
+
+  h1 {
+    padding: 2px 5px 5px 25px;
+  }
+  
+  .main-nav {
+    margin:12px 25px 0 0;
+  }
+  
+  .app-screen {
+    padding-top: 20px;
+    height: 40vw;
+    margin-left: 40px;
+    width: 75%;
+  }
+  
+  .contact-detail {
+    font-size: 90%;
+  }
+  
+    
+  }
+  
+  
+  /* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1025px) {
+  
+  
+  h1 {
+    color: #fff;
+    font-size: 110%;
+    letter-spacing: 1px;
+    float: left;
+    margin: 0 0;
+    word-spacing: 0.5px;
+    padding: 1px 3px 3px 25px;
+  }
+  
+  .long-copy {
+    line-height: 110%;
+    width: 100%;
+    margin-left: 3%;
+  }
+  
+  .main-nav {
+    margin:5px 5px 0 0;
+  }
+  
+  .main-nav li {
+    display: inline-block;
+    margin-left: 20px;
+    color: #fff;
+  }
+  
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+  }
+  
+  .main-nav li a:hover,
+  .main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+  }
+  
+  .logo {
+    height: 25px;
+    border-radius: 20%;
+    margin: 3px 0 3px 10px;
+    width: auto;
+    float: left;
+  }
+  
+  h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: " ";
+    width: 25px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .imageRenderer {
+    width: 40vw;
+    height: 25vw;
+  }
+  
+  .imageRenderer img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .imageGallery {
+    padding-top: 1px;
+    height: 108vw;
+  }
+  
+  .imageGallery img {
+    height: 40rem;
+    width: 28rem;
+  }
+  
+  .app-screen {
+    padding-top: 40px;
+    height: 52vw;
+    margin-left: 30px;
+    width: 75%;
+  }
+  
+  .contact-detail {
+    font-size: 65%;
+  }
+  
+  .gallery-photo img {
+    width: 19vw;
+    height: 32vw;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-transition: -webkit-transform 0.9s, opacity 0.9s;
+    transition: transform 0.9s, opacity 0.9s;
+  }
+  
+    
+  }
+  
 
 /* Small phones to small tablets: from 481px to 767px */
 @media only screen and (max-width: 767px) {
@@ -963,7 +1085,6 @@ h3 {
 .gallery-photo img {
   width: 38vw;
   height: 61vw;
-  text-align: center;
   -webkit-transform: scale(1.03);
   -ms-transform: scale(1.03);
   transform: scale(1.03);

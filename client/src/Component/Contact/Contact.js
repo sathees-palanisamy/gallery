@@ -47,12 +47,44 @@ class Contact extends Component {
 
     render() {
       return (
-        <section id="contact">
 <div className="section-form">
             <div className="row">
                 <h2>We're happy to hear from you</h2>
             </div>
+            <div className="row">
+              <div className="col span-1-of-2 box">
+                   <span className="contact-detail">
+                        <p><b>Address:</b></p>
+                        <p>Gokul</p>
+                        <p>No.095 286B</p>
+                        <p>1st Floor Vivekandar Street</p>
+                        <p>Lakshmi Nagar,Okkiyam Thoraipakkam</p>
+                        <p>Chennai, India - 600097</p>
+                    </span>
+              </div>
+              <div className="col span-1-of-2">
+              <span className="contact-detail">
+              <a href="https://wa.me/919677225443" className="whatsupplink">WhatsApp Chat</a>
+              </span>
+              <span className="contact-detail">
+              <i className="ion-md-call icon-small contact-detail2"></i>
+                       <span>&nbsp;&nbsp;&nbsp;+91 9677225443</span>
+              </span>
+              <span className="contact-detail">
+                <p>
+              <i className="ion-ios-mail icon-small contact-detail2"></i>
+              &nbsp;&nbsp;&nbsp;&nbsp;mymailid@gmail.com
+              </p>
+              </span>
+              </div>
+            </div>
+            <br></br>
+            <br></br>
             <form onSubmit={this.handleSubmit}>
+            <div className="row">
+                <h3>Contact Form</h3>
+                <br></br>
+            </div>
             <div className="row">
                 <div className="contact-form">
                     <div className="row">
@@ -69,19 +101,6 @@ class Contact extends Component {
                         </div>
                         <div className="col span-2-of-3">
                             <input type="email" name="email" id="email" placeholder="Your email" required onChange={this.emailChange} value={this.state.emailAddress} />
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col span-1-of-3">
-                            <label>How did you find us?</label>
-                        </div>
-                        <div className="col span-2-of-3">
-                            <select value={this.state.findUs} onChange={this.findUsChange}>
-                                <option value="friends">Friends</option>
-                                <option value="search">Search engine</option>
-                                <option value="ad">Advertisement</option>
-                                <option value="other">Other</option>
-                            </select>
                         </div>
                     </div>
                     <div className="row">
@@ -107,31 +126,12 @@ class Contact extends Component {
                         <div className="col span-2-of-3">
                             <input type="submit" value="Send it!"></input>
                         </div>
-                    </div>
-            
-            
-            <div className="row">
-              <div className="col span-1-of-2 box">
-                   <span className="contact-detail">
-                        <i className="ion-md-call icon-small"></i>
-                        +44 7438469988
-                    </span>
-              </div>
-              <div className="col span-1-of-2 box">
-                    <span className="contact-detail">
-                    <i className="ion-ios-mail icon-small"></i>
-                      Contact@kiskiphotography.com
-                    </span>
-              </div>
-            </div>
-
-                                
+                    </div>      
             </div>  
             
          </div>
          </form>
         </div>
-        </section>
       );
     }
   }
