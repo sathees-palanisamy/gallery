@@ -43,6 +43,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -50,6 +51,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -57,6 +59,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -64,6 +67,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                         </div>
                         <div class="row gallery-showcase">
@@ -73,6 +77,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -80,6 +85,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -87,6 +93,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -94,6 +101,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                         </div>
                         <div class="row gallery-showcase">
@@ -103,6 +111,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -110,6 +119,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -117,6 +127,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -124,6 +135,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                         </div>
 
@@ -134,6 +146,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -141,6 +154,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -148,6 +162,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -155,6 +170,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                         </div>
                     <div class="row gallery-showcase">
@@ -164,6 +180,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -171,6 +188,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -178,6 +196,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                             <div className="col span-1-of-4 GalleryBoxSize">
                                 <figure className="gallery-photo">
@@ -185,6 +204,7 @@ class Shop extends Component {
                                 </figure>
                                 <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
                                 <h3>Balaji Blue Tanjore</h3>
+                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
                             </div>
                         </div>
                     </main>

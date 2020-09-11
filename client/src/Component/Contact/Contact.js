@@ -55,20 +55,20 @@ class Contact extends Component {
               <div className="col span-1-of-2 box">
                    <span className="contact-detail">
                         <p><b>Address:</b></p>
-                        <p>Gokul</p>
-                        <p>No.095 286B</p>
-                        <p>1st Floor Vivekandar Street</p>
-                        <p>Lakshmi Nagar,Okkiyam Thoraipakkam</p>
-                        <p>Chennai, India - 600097</p>
+                        <p>Sathees</p>
+                        <p>No.183</p>
+                        <p>Karandipalayam,Kattuvalasu</p>
+                        <p>Erode District</p>
+                        <p>TamilNadu, India - 638056</p>
                     </span>
               </div>
               <div className="col span-1-of-2">
               <span className="contact-detail">
-              <a href="https://wa.me/919677225443" className="whatsupplink">WhatsApp Chat</a>
+              <a href="https://wa.me/919003474248" className="whatsupplink">WhatsApp Chat</a>
               </span>
               <span className="contact-detail">
               <i className="ion-md-call icon-small contact-detail2"></i>
-                       <span>&nbsp;&nbsp;&nbsp;+91 9677225443</span>
+                       <span>&nbsp;&nbsp;&nbsp;+91 9003474248</span>
               </span>
               <span className="contact-detail">
                 <p>

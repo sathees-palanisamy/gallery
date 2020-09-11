@@ -468,6 +468,19 @@ input[type=checkbox] {
     transform: translate(55%,80%);
 }
 
+.btnshop {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #e67e22;
+  color: #000;
+  padding: 1px 70px 10px 85px;
+}
+
 .btn3-color{
   background-color: #2998ff;
   border: 1px solid #2998ff;
@@ -495,6 +508,17 @@ input[type=checkbox] {
     background-color: #67ac5a;
 }
 
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #cf6d17;
+  color: #000;
+}
 
 
 /* Footer */
@@ -919,14 +943,15 @@ input[type=submit]:active {
   }
   
   .gallery-photo img {
-    width: 19vw;
+    width: 23vw;
     height: 32vw;
-    -webkit-transform: scale(1.03);
-    -ms-transform: scale(1.03);
-    transform: scale(1.03);
-    -webkit-transition: -webkit-transform 0.9s, opacity 0.9s;
-    transition: transform 0.9s, opacity 0.9s;
   }
+
+  .btn-ghost{
+    padding: 0.1% 25% 0.1% 24%;
+    font-size: 65%;
+  }
+
   
     
   }
@@ -1013,13 +1038,8 @@ h3 {
 }
 
 .gallery-photo img {
-  width: 38vw;
+  width: 50vw;
   height: 52vw;
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
-  -webkit-transition: -webkit-transform 0.9s, opacity 0.9s;
-  transition: transform 0.9s, opacity 0.9s;
 }
 
 .contact-detail {
@@ -1029,6 +1049,11 @@ h3 {
 .btn-full {
   padding: 1px 1px;
   font-size: 80%;
+}
+
+.btn-ghost {
+  padding: 1px 1px;
+  font-size: 95%;
 }
 
 
@@ -1083,13 +1108,8 @@ h3 {
 }
 
 .gallery-photo img {
-  width: 38vw;
+  width: 40vw;
   height: 61vw;
-  -webkit-transform: scale(1.03);
-  -ms-transform: scale(1.03);
-  transform: scale(1.03);
-  -webkit-transition: -webkit-transform 0.9s, opacity 0.9s;
-  transition: transform 0.9s, opacity 0.9s;
 }
 
 .hamburger {
@@ -1127,6 +1147,15 @@ margin-top: 2%;
       padding:  1rem 1rem;
     }
 
+    .btn-full {
+      font-size: 65%;
+    }
+
+    .btn-ghost{
+      padding: 0.1% 25% 0.1% 24%;
+      font-size: 65%;
+    }
+
 
 
 }
@@ -1152,6 +1181,7 @@ margin-top: 2%;
   display: none;
 }
 
+
 }
 
 
@@ -1171,6 +1201,11 @@ margin-top: 2%;
     margin: 0 0;
     word-spacing: 0.3px;
     padding: 0.5px 1.5px 1.5px 12px;
+  }
+
+  .btn-ghost{
+    padding: 0.1% 22% 0.1% 22%;
+    font-size: 65%;
   }
 
 

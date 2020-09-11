@@ -7,6 +7,7 @@ import About from './Component/About/About';
 import Shipping from './Component/Shipping/Shipping';
 import Contact from './Component/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
+import Detail from './Component/Detail/Detail';
 
 import './App.css';
 
@@ -73,6 +74,12 @@ class App extends Component {
           />
           <Route path="/contact" render={(props) =>
             <Contact
+              {...props}
+            />
+          }
+          />
+          <Route path="/detail" render={(props) =>
+            <Detail
               {...props}
             />
           }
