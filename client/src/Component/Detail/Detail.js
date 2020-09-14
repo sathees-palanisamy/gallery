@@ -1,64 +1,179 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {
+   Magnifier,
+   GlassMagnifier,
+   SideBySideMagnifier,
+   PictureInPictureMagnifier,
+   MOUSE_ACTIVATION,
+   TOUCH_ACTIVATION
+} from "react-image-magnifiers";
 
 class Detail extends Component {
-    render() {
+
+   constructor(props) {
+      super(props);
+      this.state = {price: this.priceFormating(this.props.imagePrice),priceCat: 'A'};
+
+
+      this.handleBackClick = this.handleBackClick.bind(this);
+      this.priceChange = this.priceChange.bind(this);
+   }
+
+   handleBackClick = (event) => {
+      console.log('handleBackClick');
+      this.props.switchToShopPage();
+   }
+
+  priceChange(event) {
+   this.setState({ priceCat: event.target.value });
+   let newPrice;
+   if (event.target.value === 'A') {
+      newPrice = this.props.imagePrice;
+   }
+   if (event.target.value === 'B') {
+      newPrice = this.props.imagePrice *2;
+   }
+   if (event.target.value === 'C') {
+      newPrice = this.props.imagePrice *3;
+   }
+   if (event.target.value === 'D') {
+      newPrice = this.props.imagePrice *4;
+   }
+   if (event.target.value === 'E') {
+      newPrice = this.props.imagePrice *5;
+   }
+   if (event.target.value === 'F') {
+      newPrice = this.props.imagePrice *6;
+   }
+   if (event.target.value === 'G') {
+      newPrice = this.props.imagePrice *7;
+   }
+   if (event.target.value === 'H') {
+      newPrice = this.props.imagePrice *8;
+   }
+   if (event.target.value === 'I') {
+      newPrice = this.props.imagePrice *9;
+   }
+   if (event.target.value === 'J') {
+      newPrice = this.props.imagePrice *10;
+   }
+
+
+   
+   this.setState({ price: this.priceFormating(newPrice) });
+  }
+
+  priceFormating = (inputPrice) => {
+
+   var x=inputPrice;
+   x=x.toString();
+    var lastThree = x.substring(x.length-3);
+    var otherNumbers = x.substring(0,x.length-3);
+    if(otherNumbers !== '')
+        lastThree = ',' + lastThree;
+    var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+
+    return res
+
+  }
+
+   render() {
       return (
-       <div >
-         <div className="section-steps">
-            <div className="row">
-                <h2>Heading</h2>
-            </div>
-         <div className="row">
+         <div >
+            <div className="section-steps">
+               <div className="row">
+                  <h2>{this.props.imageHeading}</h2>
+               </div>
 
-            <div className="col span-2-of-5 steps-box">
+               <div className="row">
 
-               <img src="resources/Photos/Header/2.jpeg" alt="" className="app-screen"/>
+                  <div className="col span-1-of-2 steps-box">
+                     <GlassMagnifier
+                        imageSrc={this.props.imageLink}
+                        imageAlt="image"
+                        magnifierSize="60%"
+                        square
+                     />
 
-            </div>
+                  </div>
+                  <div className="col span-1-of-2 steps-box">
+                     <div className="price clearfix">
+                        <h3>₹ {this.state.price}</h3>
+                     </div>
+                     <br></br>
+                     <div>
+                        <span className="selectLabel">Frame Size</span>
+                        <select className="select-css" value={this.state.priceCat} onChange={this.priceChange}>
+                           <option value="A">13in x 13in x 2in </option>
+                           <option value="B">15in x 15in x 2in </option>
+                           <option value="C">18in x 18in x 2in </option>
+                           <option value="D">21in x 21in x 2in </option>
+                           <option value="E">23in x 23in x 2in </option>
+                           <option value="F">28in x 28in x 2in </option>
+                           <option value="G">35in x 35in x 2in </option>
+                           <option value="H">3.5ft x 3.5ft x 2in </option>
+                           <option value="I">4.5ft x 4.5ft x 2in </option>
+                           <option value="J">6.8ft x 6.8ft x 2in </option>
+                        </select>
+                     </div>
+                     <p>&nbsp;</p>
 
-            <div className="col span-3-of-5 steps-box">
-               
-               <div className="works-step clearfix">
-                  <h3>Who:</h3>
-                  <p>
-                  Shri Rangaa is an online business of Tanjore Art Gallery  a leading manufacturer of Tanjore Paintings. It is an initiative to reach the customers directly without any middlemen or agents. After serving our customers for years through our traditional offerings, we now bring the same assurance of quality and service to our Online Channel.
+                     <div className="works-step clearfix">
+                        <h3>About:</h3>
+                        <p>
+                           This Painting is 100% handmade made with original 22 carat gold leaves and authentic Jaipur gems by skilled artisans in Thanjavur. Beautiful gift for any auspicious occasion.
                    </p>
-               </div>
+                     </div>
 
-               <p>&nbsp;</p>
+                     <p>&nbsp;</p>
 
-               <div className="works-step clearfix">
-                  <h3>What:</h3>
-                  <p>
-                  As manufacturers we offer all our products to our customers directly at wholesale prices. Therefore at this Online Store, we assure you value for your money. 
+                     <div className="works-step clearfix">
+                        <h3>Materials:</h3>
+                        <p>
+                           22 Carat Original Gold Foils, Water Resistant Plywood, Cloth, paints, authentic Jaipur gem stones, Arabic gum and chalk powder.
                   </p>
-               </div>
+                     </div>
 
-               <p>&nbsp;</p>
+                     <p>&nbsp;</p>
 
-               <div className="works-step clearfix">
-                  <h3>Where:</h3>
-                  <p>
-                  We can deliver to all over world.
+                     <div className="works-step clearfix">
+                        <h3>Frame:</h3>
+                        <p>
+                           Traditional Chettinad Teak Wood frame and Unbreakable fiberglass. Color: Multicolor.
                    </p>
+                     </div>
+
+                     <br></br>
+                     <div className="col" onClick={this.handleBackClick}>
+                        <span className="btn btn1-color">Back To Shop</span>
+                     </div>
+
+                  </div>
+
                </div>
 
-               <p>&nbsp;</p>
-
-               <div className="works-step clearfix">
-                  <h3>Secure Shopping:</h3>
-                  <p>
-                  We guarantee you a secure shopping experience on our Online Store. All information entered by you on these pages will be kept strictly in confidence and will not be sold for commercial gains. Our payment partners and shipping partners ensure a safe and comfortable shopping experience for you.There is much to explore here.
-                  </p>
-               </div>
-      
             </div>
          </div>
-        </div>
-       </div>
       );
-    }
-  }
-  
-  export default Detail;
-  
+   }
+}
+
+
+const mapStateToProps = (state) => {
+   return {
+       renderUiPage: state.pageTag.uiPage,
+       imageLink: state.pageTag.imageLink,
+       imageHeading: state.pageTag.imageHeading,
+       imagePrice: state.pageTag.imagePrice
+   }
+}
+
+const mapDispatchToProps = dispatch => {
+   return {
+      switchToShopPage: () => dispatch({ type: 'SWITCH_TO_SHOP' })   
+   }
+}
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Detail);

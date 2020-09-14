@@ -152,6 +152,23 @@ a:active {
   border-bottom: 1px solid transparent;
 }
 
+.btnHover:link,
+.btnHover:visited {
+  color: #e67e22;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #e67e22;
+  -webkit-transition: border-bottom 0.2s, color 0.2s;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+.btnHover:hover,
+.btnHover:active {
+  color: #555;
+  border-bottom: 1px solid transparent;
+}
+
+
 /* Logo */
 
 .logo {
@@ -477,7 +494,7 @@ input[type=checkbox] {
   text-align: center;
   background-color: #fff;
   border: 1px solid #e67e22;
-  color: #000;
+  color: #e67e22;
   padding: 1px 70px 10px 85px;
 }
 
@@ -951,7 +968,6 @@ input[type=submit]:active {
     padding: 0.1% 25% 0.1% 24%;
     font-size: 65%;
   }
-
   
     
   }
@@ -1057,6 +1073,7 @@ h3 {
 }
 
 
+
 }
 
 
@@ -1156,8 +1173,6 @@ margin-top: 2%;
       font-size: 65%;
     }
 
-
-
 }
 
 @media (min-width: 500px) and (min-height: 400px) {
@@ -1218,6 +1233,21 @@ margin-top: 2%;
   padding: 0.3% 0.3%;
   height: 0.2%;
 }
+
+.detailImage{
+  height: 20%;
+}
+
+.price{
+  font-size: 200%;
+}
+
+.selectLabel{
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
 
 .icon-small-black {
   display: inline-block;

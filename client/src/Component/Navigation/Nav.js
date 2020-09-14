@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
 import Auxillary from './Auxillary';
+import { connect } from 'react-redux';
 
 class Nav extends Component {
     render() {
+      let mobIcon;
+      if (!this.props.iconClicked) {
+        mobIcon = <img src="resources/favicons/hamburger.png" alt="hamburger logo" className="hamburger" onClick={this.props.drawerToggleClicked} />
+      }  else {
+        mobIcon =  <img src="resources/favicons/x.png" alt="hamburger logo" className="hamburger" onClick={this.props.drawerToggleClicked} />
+
+      }
+
       return (
         <Auxillary>
           <div className="fixed-nav">
@@ -11,11 +20,10 @@ class Nav extends Component {
          
             <div className="Header-input">
             <input type="text" name="searchitem" id="searchitem" placeholder="Search"  />
-            <i className="ion-ios-search icon-small-black search-icon-position"></i>
+            <i className="ion-ios-search icon-small-black search-icon-position" onClick={this.props.switchToSearch}></i>
             </div>
-            <img src="resources/favicons/hamburger.png" alt="hamburger logo" className="hamburger" onClick={this.props.drawerToggleClicked} />
-
-            <nav>
+            {mobIcon}
+                 <nav>
                   <ul className="main-nav">
                      <li>
                      <i className="ion-ios-home icon-small "></i>
@@ -45,6 +53,19 @@ class Nav extends Component {
       );
     }
   }
+
+  const mapStateToProps = (state) => {
+    return {
+        renderUiPage: state.pageTag.uiPage,
+    }
+  }
   
-  export default Nav;
+  const mapDispatchToProps = dispatch => {
+    return {
+      switchToSearch: () => dispatch({ type: 'SWITCH_TO_SEARCH' })
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+  
   

@@ -9,6 +9,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-hooks-helper": "^1.6.0",
+    "react-image-magnifiers": "^1.4.0",
+    "react-image-magnify": "^2.7.4",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",

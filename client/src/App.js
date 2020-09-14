@@ -7,7 +7,8 @@ import About from './Component/About/About';
 import Shipping from './Component/Shipping/Shipping';
 import Contact from './Component/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
-import Detail from './Component/Detail/Detail';
+import Search from './Component/Search/Search';
+
 
 import './App.css';
 
@@ -20,6 +21,7 @@ class App extends Component {
     this.state = {
       renderUi: 'initial',
       showSideDrawer: false,
+      iconClicked: false
     };
   }
 
@@ -31,18 +33,22 @@ class App extends Component {
     this.setState( ( prevState ) => {
         return { showSideDrawer: !prevState.showSideDrawer };
     } );
+    this.setState( ( prevState ) => {
+      return { iconClicked: !prevState.iconClicked };
+  } );
    }
 
    backDropToggle = () => {
     this.setState( ( prevState ) => {
       return { showSideDrawer: !prevState.showSideDrawer };
       } );
+
    }
 
   render() {
     return (
       <>
-        <Nav gralleryClick={this.gralleryClick} drawerToggleClicked={this.sideDrawerToggleHandler} />
+        <Nav gralleryClick={this.gralleryClick} drawerToggleClicked={this.sideDrawerToggleHandler} showSideDrawer={this.props.showSideDrawer}  iconClicked={this.state.iconClicked}/>
         <SideDrawer
           open={this.state.showSideDrawer}
           closed={this.sideDrawerClosedHandler}
@@ -78,8 +84,8 @@ class App extends Component {
             />
           }
           />
-          <Route path="/detail" render={(props) =>
-            <Detail
+          <Route path="/search" render={(props) =>
+            <Search
               {...props}
             />
           }

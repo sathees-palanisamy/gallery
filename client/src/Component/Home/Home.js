@@ -23,7 +23,7 @@ class Home extends Component {
   render() {
     let uiRender;
 
-    if (this.props.renderUiPage === 'Home') {
+    if (this.props.renderUiPage === '') {
       uiRender =    <div>
       <div className="header-flex">
         <div className="header-img">
@@ -119,7 +119,12 @@ class Home extends Component {
 
     if (this.props.renderUiPage === 'shop') {
       uiRender = <Redirect to="/shop" />
-  }
+      }
+
+    if (this.props.renderUiPage === 'search') {
+        uiRender = <Redirect to="/search" />
+        }
+  
 
     return (
       uiRender

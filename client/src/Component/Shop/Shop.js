@@ -1,217 +1,69 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import * as actions from '../store/actions';
 import './Shop.css';
+import Detail from '../Detail/Detail';
+import Embossed from './Embossed';
+import Gift from './Gift';
+import Others from './Others';
 
 class Shop extends Component {
 
+    constructor(props) {
+        super(props);
+        this.handleDetailClick = this.handleDetailClick.bind(this);
+    }
+
+
+    handleDetailClick = (imageLink, imageHeading, imagePrice) => {
+        console.log('in handleDetailClick');
+        this.props.updateData(imageLink, imageHeading, imagePrice)
+    }
+
     render() {
         let renderDisplay;
+        
+        if ((this.props.renderUiShop === 'shop') || (this.props.renderUiShop === '')) {
+           if (this.props.renderSubShop === '') {
+           renderDisplay =  <Embossed />
+            }
+           if (this.props.renderSubShop === 'gift') {
+                renderDisplay =  <Gift />
+            }
+            if (this.props.renderSubShop === 'others') {
+                renderDisplay =  <Others />
+            }
+        }
+
+        
+        if (this.props.renderUiShop === 'detail') {
+            renderDisplay = <Detail />
+        }
+
+        if (this.props.renderUiPage === 'search') {
+            renderDisplay = <Redirect to="/search" />
+        }
 
         return (
-            <div class="container">
-
-
-                <div class="content">
-                    <nav class="sidebar">
-                        <ul class="side-nav1">
-                            <li class="side-nav1__item">
-                                <a href="#" class="side-nav1__link">
-                                    <span className="side-nav1-font-size">3D EMBOSSED</span>
-                                </a>
-                            </li>
-                            <li class="side-nav1__item">
-                                <a href="#" class="side-nav1__link">
-                                    <span className="side-nav1-font-size">DECORATIVE GIFT</span>
-                                </a>
-                            </li>
-                            <li class="side-nav1__item">
-                                <a href="#" class="side-nav1__link">
-                                    <span className="side-nav1-font-size">OTHERS</span>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <div class="legal">
-                            &copy; 2020 by Shri Rangaa gallery. All rights reserved.
-                    </div>
-                    </nav>
-
-                    <main class="hotel-view">
-                        <div class="row gallery-showcase">
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/1.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/2.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/3.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/4.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                        </div>
-                        <div class="row gallery-showcase">
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/5.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/6.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/7.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/8.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                        </div>
-                        <div class="row gallery-showcase">
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/9.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/10.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/11.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/12.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                        </div>
-
-                    <div class="row gallery-showcase">
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/13.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/14.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/15.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/16.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                        </div>
-                    <div class="row gallery-showcase">
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/17.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/18.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/19.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                            <div className="col span-1-of-4 GalleryBoxSize">
-                                <figure className="gallery-photo">
-                                    <img src="resources/Photos/Header/20.jpeg" alt="Fashion" onClick={this.props.fashionClick} />
-                                </figure>
-                                <div className="btn-full" onClick={this.props.fashionClick}>From ₹6,500.00</div>
-                                <h3>Balaji Blue Tanjore</h3>
-                                <a className="btnshop btn-ghost" href="/detail">More Details</a>
-                            </div>
-                        </div>
-                    </main>
-                </div>
-            </div>
-        );
+            renderDisplay
+         );
     }
 }
 
-export default Shop;
+const mapStateToProps = (state) => {
+    return {
+        renderUiPage: state.pageTag.uiPage,
+        renderUiShop: state.pageTag.uiShop,
+        renderSubShop: state.pageTag.subShop
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        updateData: (imageLink, imageHeading, imagePrice) => dispatch(actions.updateData(imageLink, imageHeading, imagePrice)),
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Shop);

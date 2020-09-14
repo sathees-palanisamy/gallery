@@ -2,7 +2,12 @@ import { combineReducers } from 'redux';
 
 // To initialize the store 
 const initialState = {
-    uiPage: 'Home',
+    uiPage: '',
+    imageLink: '',
+    imageHeading: 'Heading',
+    imagePrice: '',
+    uiShop: '',
+    subShop: ''
 };
 
 // To change the state based on th action reducers 
@@ -11,13 +16,49 @@ const pageReducer = (state = initialState, action) => {
         case 'SWITCH_TO_HOME':
             return {
                 ...state,
-                uiPage: 'home'
+                uiPage: ''
             }
-        case 'SWITCH_TO_SHOP':
+        case 'SWITCH_TO_SEARCH':
                 return {
                     ...state,
-                    uiPage: 'shop'
+                    uiPage: 'search'
                 }
+        case 'SWITCH_TO_SHOP':
+            return {
+                ...state,
+                uiPage: 'shop',
+                uiShop: 'shop',
+                subShop: ''
+            }
+        case 'SWITCH_TO_EMBOSSED':
+                return {
+                    ...state,
+                    uiPage: 'shop',
+                    uiShop: 'shop',
+                    subShop: ''
+                }
+        case 'SWITCH_TO_GIFT':
+                return {
+                    ...state,
+                    uiPage: 'shop',
+                    uiShop: 'shop',
+                    subShop: 'gift'
+                }
+        case 'SWITCH_TO_OTHERS':
+                return {
+                    ...state,
+                    uiPage: 'shop',
+                    uiShop: 'shop',
+                    subShop: 'others'
+                }
+        case 'DATA_MAPPING':
+            return {
+                ...state,
+                uiShop: 'detail',
+                imageLink: action.imageLink,
+                imageHeading: action.imageHeading,
+                imagePrice: action.imagePrice
+            }
         default:
             return state;
     }
