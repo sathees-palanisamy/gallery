@@ -25,17 +25,17 @@ class Others extends Component {
             <nav class="sidebar">
                 <ul class="side-nav1">
                     <li class="side-nav1__item" onClick={this.props.switchToEmbossed}>
-                        <a href="/shop" class="side-nav1__link">
+                        <a href="#" class="side-nav1__link">
                             <span className="side-nav1-font-size">3D EMBOSSED</span>
                         </a>
                     </li>
                     <li class="side-nav1__item" onClick={this.props.switchToGift}>
-                        <a href="/shop" class="side-nav1__link">
+                        <a href="#" class="side-nav1__link">
                             <span className="side-nav1-font-size">DECORATIVE GIFT</span>
                         </a>
                     </li>
                     <li class="side-nav1__item side-nav1__item--active" onClick={this.props.switchToOthers}>
-                        <a href="/shop" class="side-nav1__link">
+                        <a href="#" class="side-nav1__link">
                             <span className="side-nav1-font-size">OTHERS</span>
                         </a>
                     </li>
