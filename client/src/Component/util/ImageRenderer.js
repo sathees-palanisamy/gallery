@@ -12,7 +12,7 @@ const ImageRenderer = ({ initialStep, images }) => {
   const { src, alt = '' } = step;
 
   return (
-    <div className="imageRenderer">
+    <div>
       <img alt={alt} src={src} />
       <ImageNav
         isPaused={isPaused}

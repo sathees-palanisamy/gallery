@@ -721,6 +721,11 @@ input[type=checkbox] {
   padding: 5px 5px;
 }
 
+.section-steps1 {
+  margin: 0 0;
+  padding: 1px 1px;
+}
+
 .steps-box {
   margin-top: 30px;
   padding-right: 3%;
@@ -728,7 +733,14 @@ input[type=checkbox] {
 
 .app-screen {
   margin-left: 90px;
-  width: 75%;
+  width: 80%;
+  height: auto;
+}
+
+
+.app-screen1 {
+  margin-left: 90px;
+  width: 80%;
   height: auto;
 }
 
@@ -852,8 +864,16 @@ input[type=submit]:active {
     padding-top: 20px;
     height: 40vw;
     margin-left: 40px;
-    width: 75%;
+    width: 80%;
   }
+
+  .app-screen1 {
+    padding-top: 20px;
+    height: 40vw;
+    margin-left: 40px;
+    width: 80%;
+  }
+  
   
   .contact-detail {
     font-size: 90%;
@@ -952,8 +972,16 @@ input[type=submit]:active {
     padding-top: 40px;
     height: 52vw;
     margin-left: 30px;
-    width: 75%;
+    width: 80%;
   }
+
+  .app-screen1 {
+    padding-top: 40px;
+    height: 52vw;
+    margin-left: 30px;
+    width: 80%;
+  }
+  
   
   .contact-detail {
     font-size: 65%;
@@ -1032,7 +1060,15 @@ input[type=submit]:active {
   padding-top: 10px;
   height: 20vw;
   margin-left: 45px;
-  width: 75%;
+  width: 80%;
+  height: auto;
+}
+
+.app-screen1 {
+  padding-top: 10px;
+  height: 20vw;
+  margin-left: 45px;
+  width: 80%;
   height: auto;
 }
 
@@ -1101,9 +1137,20 @@ h3 {
   padding-top: 10px;
   height: 15vw;
   margin-left: 45px;
-  width: 75%;
+  width: 80%;
   height: auto;
 }
+
+.app-screen1 {
+  padding-top: 10px;
+  height: 15vw;
+  margin-left: 45px;
+  width: 80%;
+  height: auto;
+}
+
+
+
 
 .contact-detail {
   font-size: 50%;
@@ -1370,3 +1417,20 @@ margin-top: 2%;
           border-bottom: 1px solid #eee; }
 
 
+          .btnhome {
+            background-color: #e67e22;
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 0.9rem 1.5rem;
+            cursor: pointer;
+            transition: all .2s; }
+            .btnhome:hover {
+              background-color: #e49f63; }
+
+  .btnpos{
+    text-align: center;
+  }
