@@ -8,7 +8,7 @@ html,
 body {
   background-color: #EAEDED; 
   color: #555;
-  font-family: 'Lato', 'Arial', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
@@ -1378,7 +1378,7 @@ margin-top: 2%;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
     .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(./6.jpeg); }
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(./8.jpeg); }
     .card__picture--2 {
       background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(./10.jpeg); }
     .card__picture--3 {

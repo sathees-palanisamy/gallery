@@ -1,0 +1,19 @@
+.hcard {
+    perspective: 75rem;
+    -moz-perspective: 75rem;
+    position: relative;
+    height: 26rem; }
+    .hcard__side {
+      height: 26rem;
+      transition: all .8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+      .hcard__side--front {
+        background-color: rgb(216, 140, 140); }

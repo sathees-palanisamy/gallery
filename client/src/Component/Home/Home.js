@@ -25,47 +25,50 @@ class Home extends Component {
 
     if (this.props.renderUiPage === '') {
       uiRender = <div>
-        <div>
-          <div className="row">
-            <h2>Welcome to our Gallery</h2>
-          </div>
-          <div className="row">
-
-            <div className="col span-1-of-2">
-
-              <img src="resources/Photos/Header/2.jpeg" alt="Home Image" className="app-screen1" />
-              
+ 
+            <div className="row">
+              <h2>Welcome to Shri Rangaa Tanjore Gallery</h2>
             </div>
+            <div className="row">
 
-            <div className="col span-1-of-2">
 
-              <br></br>
-              <br></br>
+              <div className="col span-1-of-2 imagebackground">
 
-              <p class="long-copy">Tanjore paintings are made by skilled artisans with lot of dedication, which last for many generations. Our Tanjore painting are adorning the walls of pooja rooms, receptions, offices and are gifted to family & friends on special occassions. </p>
-              <br></br>
-              <div class="long-copy">
-                <ul>
-                  <li><b>17 Years of experience</b></li>
-                  <li><b>Good quality raw materials are used in making</b></li>
-                  <li><b>Prompt Delivery</b></li>
-                </ul>
+                <img src="resources/Photos/Header/2.jpeg" alt="Home Image" className="app-screen1" />
+
               </div>
 
-            <br></br>
-            <br></br>
-            <div className="btnpos">
-            <button href="/shop" className="btnhome" onClick={this.props.switchToShopPage} >Shop now!</button>
-            </div>
+              <div className="col span-1-of-2 padding-card">
+                <div className="card">
+                  <div className="card__side card__side--front">
+                    <br></br>
+                    <br></br>
+                    <p class="long-copy">Tanjore paintings are made by skilled artisans with lot of dedication, which last for many generations. Our Tanjore painting are adorning the walls of pooja rooms, receptions, offices and are gifted to family & friends on special occassions. </p>
+                    <br></br>
+                    <div class="long-copy">
+                      <ul>
+                        <li><b>17 Years of experience</b></li>
+                        <li><b>Good quality raw materials are used in making</b></li>
+                        <li><b>Direct from artisans</b></li>
+                        <li><b>Handcrafted items</b></li>
+                        <li><b>Prompt Delivery</b></li>
+                      </ul>
+                    </div>
+
+                    <br></br>
+                    <br></br>
+                    <div className="btnpos">
+                      <button href="/shop" className="btnhome" onClick={this.props.switchToShopPage} >Shop now!</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
 
-          </div>
-        </div>
-
 
         <br></br>
-        <br></br>
+
         <div >
 
           <div class="row">
@@ -76,7 +79,7 @@ class Home extends Component {
                     &nbsp;
               </div>
                   <h4 class="card__heading">
-                    <span class="card__heading-span card__heading-span--1">3D Embossed</span>
+                    <span class="card__heading-span card__heading-span--1">Goddess</span>
                   </h4>
                   <div class="card__details">
                     <ul>

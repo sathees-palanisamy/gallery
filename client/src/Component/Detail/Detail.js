@@ -32,31 +32,25 @@ class Detail extends Component {
       newPrice = this.props.imagePrice;
    }
    if (event.target.value === 'B') {
-      newPrice = this.props.imagePrice *2;
+      newPrice = this.props.imagePrice *1.5;
    }
    if (event.target.value === 'C') {
-      newPrice = this.props.imagePrice *3;
+      newPrice = this.props.imagePrice *2;
    }
    if (event.target.value === 'D') {
-      newPrice = this.props.imagePrice *4;
+      newPrice = this.props.imagePrice *2.5;
    }
    if (event.target.value === 'E') {
-      newPrice = this.props.imagePrice *5;
+      newPrice = this.props.imagePrice *2.875;
    }
    if (event.target.value === 'F') {
-      newPrice = this.props.imagePrice *6;
+      newPrice = this.props.imagePrice *3.75;
    }
    if (event.target.value === 'G') {
-      newPrice = this.props.imagePrice *7;
+      newPrice = this.props.imagePrice *5.5;
    }
    if (event.target.value === 'H') {
-      newPrice = this.props.imagePrice *8;
-   }
-   if (event.target.value === 'I') {
-      newPrice = this.props.imagePrice *9;
-   }
-   if (event.target.value === 'J') {
-      newPrice = this.props.imagePrice *10;
+      newPrice = this.props.imagePrice *7.5;
    }
 
 
@@ -105,16 +99,14 @@ class Detail extends Component {
                      <div>
                         <span className="selectLabel">Frame Size</span>
                         <select className="select-css" value={this.state.priceCat} onChange={this.priceChange}>
-                           <option value="A">13in x 13in x 2in </option>
-                           <option value="B">15in x 15in x 2in </option>
-                           <option value="C">18in x 18in x 2in </option>
-                           <option value="D">21in x 21in x 2in </option>
-                           <option value="E">23in x 23in x 2in </option>
-                           <option value="F">28in x 28in x 2in </option>
-                           <option value="G">35in x 35in x 2in </option>
-                           <option value="H">3.5ft x 3.5ft x 2in </option>
-                           <option value="I">4.5ft x 4.5ft x 2in </option>
-                           <option value="J">6.8ft x 6.8ft x 2in </option>
+                           <option value="A">13in x 11in x 2in </option>
+                           <option value="B">15in x 13in x 2in </option>
+                           <option value="C">18in x 15in x 2in </option>
+                           <option value="D">21in x 18in x 2in </option>
+                           <option value="E">23in x 19in x 2in </option>
+                           <option value="F">28in x 22in x 2in </option>
+                           <option value="G">31in x 25in x 2in </option>
+                           <option value="H">35in x 29in x 2in </option>
                         </select>
                      </div>
                      <p>&nbsp;</p>
