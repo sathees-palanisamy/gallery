@@ -24,7 +24,7 @@ class About extends Component {
                 <div className="works-step clearfix">
                    <h3>Who:</h3>
                    <p>
-                   Shri Rangaa is an online business of Tanjore Art Gallery  a leading manufacturer of Tanjore Paintings. It is an initiative to reach the customers directly without any middlemen or agents. After serving our customers for years through our traditional offerings, we now bring the same assurance of quality and service to our Online Channel.
+                   We are skilled artisans with 17 years of experience. We are doing this service all over the India and well known for Tanjore paintings.
                     </p>
                 </div>
  
@@ -33,7 +33,7 @@ class About extends Component {
                 <div className="works-step clearfix">
                    <h3>What:</h3>
                    <p>
-                   As manufacturers we offer all our products to our customers directly at wholesale prices. Therefore at this Online Store, we assure you value for your money. 
+                   We are selling the paintings with in margin to accommodate the cost of the raw materials and artisans’ wages. We are deliver the paintings with high quality and secure shipping. 
                    </p>
                 </div>
  
@@ -42,16 +42,16 @@ class About extends Component {
                 <div className="works-step clearfix">
                    <h3>Where:</h3>
                    <p>
-                   We can deliver to all over world.
+                   We can deliver to all over India.
                     </p>
                 </div>
  
                 <p>&nbsp;</p>
  
                 <div className="works-step clearfix">
-                   <h3>Secure Shopping:</h3>
+                   <h3>Privacy Policy :</h3>
                    <p>
-                   We guarantee you a secure shopping experience on our Online Store. All information entered by you on these pages will be kept strictly in confidence and will not be sold for commercial gains. Our payment partners and shipping partners ensure a safe and comfortable shopping experience for you.There is much to explore here.
+                   We are making sure to follow the privacy policy of India and ensure to protect the customer data.
                    </p>
                 </div>
        

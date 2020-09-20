@@ -6,80 +6,74 @@ class Testimonals extends Component {
     render() {
         let uiRender;
         if (this.props.renderUiPage === '') {
-            uiRender =  <div className="section-testimonials">
-            <br></br>
-           <div className="row" >
-               <h2>Processing Time & Shipping within India</h2>
-           </div>
-           <div className="row">
-               <div className="col span-1-of-3">
-                   <div className="blockquote1">
-                   All the Paintings are made to order, the processing time will take 2 to 3 weeks ( Working days ) depending upon the size. TTAGALLERY will ensure that the products are delivered in excellent condition and in the fastest time possible. Most of the items are shipped for free.
+            uiRender = <div className="section-testimonials">
+                <br></br>
+                <div className="row" >
+                    <h2>Processing Time</h2>
+                </div>
+                <div className="row">
+                    <div className="col span-1-of-2">
+                        <div className="blockquote1">
+                        <p><i><u>Onboarding:</u></i></p>We are processing the paintings in less time compared to other competitors whereas processing time is based on size and design. We will provide you processing time once you are onboarded and we will make sure to deliver on or before the align date.
                             </div>
-               </div>
-               <div className="col span-1-of-3">
-                   <div className="blockquote1">
-                   <p><i>CASH ON DELIVERY:</i></p>You can choose the Cash-on-Delivery (COD) mode of payment and pay for your order only when you actually receive it. COD is provided through our logistic partners in the selected cities only. 
+                    </div>
+                    <div className="col span-1-of-2">
+                        <div className="blockquote1">
+                            <p><i><u>Initial payment:</u></i></p>Once you are onboarded, we will request you to pay 50% amount of the actual painting cost. Please transfer the money to below bank Details.
+                            <ul>
+                                <li>Account Name: Shri Rangaa</li>
+                                <li>IFSC Code   : IFSC0001 </li>
+                                <li>Account No  : 463846346364638 </li>
+                                <li>Bank Name   : Chennai </li>
+                            </ul>
                    </div>
-               </div>
-               <div className="col span-1-of-3">
-                   <div className="blockquote1">
-                   <p><i>Shipping Time INDIA:</i></p>
-                   <p>Zone A:  Within Chennai - 2 days</p>
-                   <p>Zone B:  Within Same state – 3 days</p>
-                   <p>Zone C:  Metro to Metro – 3-4 days</p>
-                   <p>Zone D:  Rest of India – 4-5 days</p>
-                   <p>Zone E:  North east & Jammu – 6-7 days</p>
+                    </div>
+                </div>
+                <div className="row" >
+                    <h2>Shipping - India only</h2>
+                </div>
+                <br></br>
+                <div className="row">
+                    <div className="col span-1-of-2">
+                        <div className="blockquote1">
+                            <p><i><u>Shipping Time:</u></i></p>
+                            <p>Within Chennai => 2 days</p>
+                            <p>Within Tamil Nadu => 3 days</p>
+                            <p>Cities => 3 to 4 days</p>
+                            <p>Rest of India => 4 to 5 days</p>     
+                            <p>North east & Jammu => 6 to 7 days</p>
+                        </div>
+                    </div>
+
+                    <div className="col span-1-of-2">
+                        <div className="blockquote1">
+                            <p><i><u>Shipment Support:</u></i></p>We will provide you the contact details of delivery partner and delivery note once shipment is made. Shipment is 100% insured and fragile noted delivery, so you no need to worry about the product. Please contact us in case of any issues.
                    </div>
-               </div>
-           </div>
-           <br></br>
-           <div className="row" >
-               <h2>International Shipping</h2>
-           </div>
-           <div className="row">
-               <div className="col span-1-of-3">
-               <div className="blockquote1">
-               <p>The transport costs for your shipments are calculated on the basis of the total weight.
-   A decisive factor for calculating the price, however, is whether the dimensional weight exceeds the actual weight.
-   </p>
-                 /div>
-               </div>
-           </div>
-           <div className="col span-1-of-3">
-                   <div className="blockquote1">
-                   <p><i>Import Duty:</i></p>We don't have any control over import duty, and we cannot able to tell how much customs officer will charge you. It purely depends on the country and their customs policy. Customers only need to pay the customs Duty for their products if any.
-                   </div>
-               </div>
-   
-               <div className="col span-1-of-3">
-                   <div className="blockquote1">
-                   We do not accept any responsibility and will not be liable for any loss or damage on International shipping. Insurance Claim should be made directly to the UPS/FEDEX/DHL.
-                   </div>
-               </div>
-               </div>
-               <br></br>
-          </div>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+
+            </div>
 
         }
 
         if (this.props.renderUiPage === 'search') {
             uiRender = <Redirect to="/search" />
-            }
-  
-            
-      return (
-        uiRender  
-      );
+        }
+
+
+        return (
+            uiRender
+        );
     }
-  }
-  
-  const mapStateToProps = (state) => {
+}
+
+const mapStateToProps = (state) => {
     return {
         renderUiPage: state.pageTag.uiPage,
     }
-  }
-  
-  export default connect(mapStateToProps)(Testimonals);
+}
 
-  
+export default connect(mapStateToProps)(Testimonals);
+

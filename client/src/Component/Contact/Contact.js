@@ -59,7 +59,6 @@ class Contact extends Component {
             <div className="col span-1-of-2 box">
                  <span className="contact-detail">
                       <p><b>Address:</b></p>
-                      <p>Sathees</p>
                       <p>No.183</p>
                       <p>Karandipalayam,Kattuvalasu</p>
                       <p>Erode District</p>
