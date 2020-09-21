@@ -29,10 +29,12 @@ class Testimonals extends Component {
                    </div>
                     </div>
                 </div>
+                <br></br>
+                <br></br>
+                <br></br>
                 <div className="row" >
                     <h2>Shipping - India only</h2>
                 </div>
-                <br></br>
                 <div className="row">
                     <div className="col span-1-of-2">
                         <div className="blockquote1">

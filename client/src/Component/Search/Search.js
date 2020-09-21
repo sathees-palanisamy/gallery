@@ -10,13 +10,28 @@ class Search extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {categories: ''};
         this.handleDetailClick = this.handleDetailClick.bind(this);
+        this.handleCategoryClick = this.handleCategoryClick.bind(this);
     }
 
 
     handleDetailClick = (imageLink, imageHeading, imagePrice) => {
         console.log('in handleDetailClick');
         this.props.updateData(imageLink, imageHeading, imagePrice)
+    }
+
+    handleCategoryClick(event) {
+        this.setState({ categories: event.target.value });
+        if (event.target.value === 'Goddess') {
+        this.props.switchToEmbossed();
+        }
+        if (event.target.value === 'Decorative Gift') {
+            this.props.switchToGift();
+        }
+        if (event.target.value === 'Others') {
+            this.props.switchToOthers();
+        }
     }
 
     render() {
@@ -47,6 +62,16 @@ class Search extends Component {
                     &copy; 2020 by Shri Rangaa gallery. All rights reserved.
             </div>
             </nav>
+
+            <div className="CategoriesSelect"> 
+            <h2>Categories</h2>
+                    <select className="select-css" value={this.state.categories} onChange={this.handleCategoryClick}>
+                        <option value="">Select</option>
+                        <option value="Goddess">Goddess</option>
+                        <option value="Decorative Gift">Decorative Gift</option>
+                        <option value="Others">Others</option>
+                    </select>
+            </div>
 
             <main class="hotel-view">
                 <div class="row gallery-showcase">

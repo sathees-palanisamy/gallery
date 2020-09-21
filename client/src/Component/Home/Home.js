@@ -72,20 +72,20 @@ class Home extends Component {
         <div className="row">
           <div class="story">
             <figure class="story__shape">
-                            <img src="resources/Photos/contact.jpeg" alt="Person on a tour" class="story__img"/>
+                            <img src="resources/Photos/contact.png" alt="Person on a tour" class="story__img"/>
                         </figure>
             <div class="story__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">Quick Contact</h3>
-              <span className="contact-detail">
+              <h3 class="heading-tertiary u-margin-bottom-small">Quick Connect</h3>
+              <span >
                 <a href="https://wa.me/919003474248" className="whatsupplink">WhatsApp Chat</a>
               </span>
-              <span className="contact-detail">
-                <i className="ion-md-call icon-small contact-detail2"></i>
+              <span >
+                <i className="ion-md-call icon-small "></i>
                 <span>&nbsp;&nbsp;+91 9003474248</span>
               </span>
-              <span className="contact-detail">
+              <span>
                 <p>
-                  <i className="ion-ios-mail icon-small contact-detail2"></i>
+                  <i className="ion-ios-mail icon-small "></i>
                   &nbsp;&nbsp;shrirangaagallery@gmail.com
             </p>
               </span>
@@ -102,7 +102,7 @@ class Home extends Component {
             <div class="story__text">
             <br></br>
            <br></br>
-              <h3 class="heading-tertiary u-margin-bottom-small">Free Shipping & Free Service</h3>
+              <h3 class="heading-tertiary u-margin-bottom-small">Free Shipping</h3>
               <br></br>
               <span>
                 <i className="ion-ios-car icon-small"></i>
@@ -120,7 +120,7 @@ class Home extends Component {
         <div className="row">
           <div class="story">
           <figure class="story__shape">
-                            <img src="resources/Photos/bank.jpeg" alt="Person on a tour" class="story__img"/>
+                            <img src="resources/Photos/bank.jpg" alt="Person on a tour" class="story__img"/>
                         </figure>
             <div class="story__text">
             <br></br>
