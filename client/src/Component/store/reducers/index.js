@@ -7,7 +7,8 @@ const initialState = {
     imageHeading: 'Heading',
     imagePrice: '',
     uiShop: '',
-    subShop: ''
+    subShop: '',
+    order: [],
 };
 
 // To change the state based on th action reducers 
@@ -28,7 +29,6 @@ const pageReducer = (state = initialState, action) => {
                 ...state,
                 uiPage: 'shop',
                 uiShop: 'shop',
-                subShop: ''
             }
         case 'SWITCH_TO_EMBOSSED':
                 return {
@@ -51,6 +51,16 @@ const pageReducer = (state = initialState, action) => {
                     uiShop: 'shop',
                     subShop: 'others'
                 }
+        case 'ADD_TO_BASKET':
+                    return {
+                        ...state,
+                        order: [...state.order,action.newOrder],
+                    }
+        case 'UPDATE_BASKET':
+                        return {
+                            ...state,
+                            order: [...action.newOrders],
+                        }
         case 'DATA_MAPPING':
             return {
                 ...state,

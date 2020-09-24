@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import * as actions from '../store/actions';
 import './Shop.css';
 import Detail from '../Detail/Detail';
+import { withRouter } from 'react-router';
 
 class Embossed extends Component {
 
@@ -167,4 +168,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Embossed);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Embossed));

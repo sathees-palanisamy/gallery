@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Auxillary from './Auxillary';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
     render() {
@@ -27,23 +29,23 @@ class Nav extends Component {
                   <ul className="main-nav">
                      <li>
                      <i className="ion-ios-home icon-small "></i>
-                      <a href="/" >Home</a>
+                      <Link to="/">Home</Link>
                      </li>
                      <li>
                      <i className="ion-ios-photos icon-small "></i>
-                      <a href="/shop" >Shop</a>
+                      <Link to="/shop">Shop</Link>
                      </li>
                      <li>
                      <i className="ion-ios-car icon-small "></i>
-                      <a href="/shipping" >Shipping</a>
+                      <Link to="/shipping">Shipping</Link>
                      </li>
                      <li>
-                     <i className="ion-ios-pricetag icon-small "></i>
-                      <a href="/about" >About</a>
+                     <i className="ion-ios-basket icon-small"></i>
+                      <Link to="/basket">basket</Link>
                      </li>
                      <li>
                       <i className="ion-ios-call icon-small"></i>
-                       <a href="/contact" >Contact</a>
+                       <Link to="/contact">Contact</Link>
                      </li>
                   </ul>
            </nav>
@@ -65,7 +67,8 @@ class Nav extends Component {
       switchToSearch: () => dispatch({ type: 'SWITCH_TO_SEARCH' })
     }
   }
-  
-  export default connect(mapStateToProps, mapDispatchToProps)(Nav);
+
+
+  export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav));
   
   

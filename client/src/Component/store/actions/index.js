@@ -8,3 +8,26 @@ export const updateData = (imageLink, imageHeading, imagePrice) => {
     }
 
 }
+
+export const addBasket = (imageLink, imageHeading, imagePrice,frameSize,quantity) => {
+
+    return {
+        type: 'ADD_TO_BASKET',
+        newOrder: {"imageLink" : imageLink,
+        "imageHeading": imageHeading,
+        "imagePrice": imagePrice,
+        "frameSize": frameSize,
+        "quantity": quantity
+    }
+    }
+
+}
+
+export const updateBasket = (newOrders) => {
+
+    return {
+        type: 'UPDATE_BASKET',
+        newOrders: newOrders,
+    }
+
+}

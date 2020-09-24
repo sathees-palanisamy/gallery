@@ -5,6 +5,7 @@ import * as actions from '../store/actions';
 import '../Shop/Shop.css';
 import Detail from '../Detail/Detail';
 import Shop from '../Shop/Shop';
+import { withRouter } from 'react-router';
 
 class Search extends Component {
 
@@ -116,5 +117,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-
-export default connect(mapStateToProps, mapDispatchToProps)(Search);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search));

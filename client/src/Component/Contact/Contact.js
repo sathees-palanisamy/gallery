@@ -1,56 +1,18 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class Contact extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {customerName: '',emailAddress: ' ',customerDescription: '',findUs:'friends',appointment: true};
-    
-        this.nameChange = this.nameChange.bind(this);
-        this.emailChange = this.emailChange.bind(this);
-        this.descriptionChange = this.descriptionChange.bind(this);
-        this.findUsChange = this.findUsChange.bind(this);
-        this.appointmentChange = this.appointmentChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
 
-      nameChange(event) {
-        this.setState({customerName: event.target.value});
-      }
-
-      emailChange(event) {
-        this.setState({emailAddress: event.target.value});
-      }
-
-      descriptionChange(event) {
-        this.setState({customerDescription: event.target.value});
-      }
-
-      findUsChange(event) {
-        this.setState({findUs: event.target.value});
-      }
-
-      appointmentChange(event) {
-        this.setState(prevState => ({
-            appointment: !prevState.appointment
-          }));
-      }
-    
-
-      handleSubmit(event) {
-        alert('A name was submitted: ' + this.state.customerName);
-        this.setState({customerName: '',emailAddress: ' ',customerDescription: '',findUs:'friends',appointment: true});
-        event.preventDefault();
-      }
-
+      
 
 
     render() {
 
       let uiRender;
-      if (this.props.renderUiPage === '') {
+      if (this.props.renderUiPage !== 'search') {
           uiRender = <div className="section-form">
           <div className="row">
               <h2>We're happy to hear from you</h2>
@@ -83,57 +45,58 @@ class Contact extends Component {
           </div>
           <br></br>
           <br></br>
-          <form onSubmit={this.handleSubmit}>
+          <div className="section-steps">
+             <div className="row">
+                 <h2>Who are we</h2>
+             </div>
           <div className="row">
-              <h3>Contact Form</h3>
-              <br></br>
+ 
+             <div className="col span-2-of-5 steps-box">
+ 
+                <img src="resources/Photos/Header/2.jpeg" alt="" className="app-screen"/>
+ 
+             </div>
+ 
+             <div className="col span-3-of-5 steps-box">
+                
+                <div className="works-step clearfix">
+                   <h3>Who:</h3>
+                   <p>
+                   We are skilled artisans with 17 years of experience. We are doing this service all over the India and well known for Tanjore paintings.
+                    </p>
+                </div>
+ 
+                <p>&nbsp;</p>
+ 
+                <div className="works-step clearfix">
+                   <h3>What:</h3>
+                   <p>
+                   We are selling the paintings with in margin to accommodate the cost of the raw materials and artisans’ wages. We are deliver the paintings with high quality and secure shipping. 
+                   </p>
+                </div>
+ 
+                <p>&nbsp;</p>
+ 
+                <div className="works-step clearfix">
+                   <h3>Where:</h3>
+                   <p>
+                   We can deliver to all over India.
+                    </p>
+                </div>
+ 
+                <p>&nbsp;</p>
+ 
+                <div className="works-step clearfix">
+                   <h3>Privacy Policy :</h3>
+                   <p>
+                   We are making sure to follow the privacy policy of India and ensure to protect the customer data.
+                   </p>
+                </div>
+       
+             </div>
           </div>
-          <div className="row">
-              <div className="contact-form">
-                  <div className="row">
-                      <div className="col span-1-of-3">
-                          <label>Name</label>
-                      </div>
-                      <div className="col span-2-of-3">
-                          <input type="text" name="name" id="name" placeholder="Your name" required onChange={this.nameChange} value={this.state.customerName} />
-                      </div>
-                  </div>
-                  <div className="row">
-                      <div className="col span-1-of-3">
-                          <label>Email</label>
-                      </div>
-                      <div className="col span-2-of-3">
-                          <input type="email" name="email" id="email" placeholder="Your email" required onChange={this.emailChange} value={this.state.emailAddress} />
-                      </div>
-                  </div>
-                  <div className="row">
-                      <div className="col span-1-of-3">
-                          <label>Appointment Required?</label>
-                      </div>
-                      <div className="col span-2-of-3">
-                          <input type="checkbox" name="news" id="news" checked={this.state.appointment} onChange={this.appointmentChange}/> Yes, please
-                      </div>
-                  </div>
-                  <div className="row">
-                      <div className="col span-1-of-3">
-                          <label>Drop us a line</label>
-                      </div>
-                      <div className="col span-2-of-3">
-                          <textarea className="message" placeholder="Your message" onChange={this.descriptionChange} required value={this.state.customerDescription} ></textarea>
-                      </div>
-                  </div>
-                  <div className="row">
-                      <div className="col span-1-of-3">
-                          <label>&nbsp;</label>
-                      </div>
-                      <div className="col span-2-of-3">
-                          <input type="submit" value="Send it!"></input>
-                      </div>
-                  </div>      
-          </div>  
-          
-       </div>
-       </form>
+         </div>
+     
       </div>
 
       }
@@ -153,7 +116,8 @@ class Contact extends Component {
         renderUiPage: state.pageTag.uiPage,
     }
   }
-  
-  export default connect(mapStateToProps)(Contact);
+
+
+  export default withRouter(connect(mapStateToProps)(Contact));
   
   

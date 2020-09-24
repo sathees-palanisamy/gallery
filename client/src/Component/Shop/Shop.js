@@ -7,6 +7,7 @@ import Detail from '../Detail/Detail';
 import Embossed from './Embossed';
 import Gift from './Gift';
 import Others from './Others';
+import { withRouter } from 'react-router';
 
 class Shop extends Component {
 
@@ -66,4 +67,5 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Shop);
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Shop));

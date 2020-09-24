@@ -8,6 +8,8 @@ import Shipping from './Component/Shipping/Shipping';
 import Contact from './Component/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
 import Search from './Component/Search/Search';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 
 import './App.css';
@@ -21,7 +23,7 @@ class App extends Component {
     this.state = {
       renderUi: 'initial',
       showSideDrawer: false,
-      iconClicked: false
+      iconClicked: false,
     };
   }
 
@@ -43,6 +45,10 @@ class App extends Component {
       return { showSideDrawer: !prevState.showSideDrawer };
       } );
 
+      this.setState( ( prevState ) => {
+        return { iconClicked: !prevState.iconClicked };
+    } );
+
    }
 
   render() {
@@ -56,39 +62,41 @@ class App extends Component {
           backDropToggle={this.backDropToggle}
         />
          <Switch>
-          <Route path="/" exact render={(props) =>
-            <Home
+          <Route path="/" exact render={(props) => (
+            <Home 
+            {...props}
             />
-          }
+          )}
           />
-          <Route path="/shop" render={(props) =>
+          <Route path="/shop" render={(props) => (
             <Shop
+            {...props}
             />
-          }
+          )}
           />
-          <Route path="/shipping" render={(props) =>
+          <Route path="/shipping" render={(props) => (
             <Shipping
               {...props}
             />
-          }
+          )}
           />
-          <Route path="/about" render={(props) =>
+          <Route path="/basket" render={(props) => (
             <About
               {...props}
             />
-          }
+          )}
           />
-          <Route path="/contact" render={(props) =>
+          <Route path="/contact" render={(props) => (
             <Contact
               {...props}
             />
-          }
+          )}
           />
-          <Route path="/search" render={(props) =>
+          <Route path="/search" render={(props) => (
             <Search
               {...props}
             />
-          }
+          )}
           />
         </Switch>
       </>
@@ -96,4 +104,11 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+      renderUiPage: state.pageTag.uiPage,
+      orders: state.pageTag.order
+  }
+}
+
+export default withRouter(connect(mapStateToProps)(App));

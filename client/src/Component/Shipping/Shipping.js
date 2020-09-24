@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 class Testimonals extends Component {
     render() {
         let uiRender;
-        if (this.props.renderUiPage === '') {
+        if (this.props.renderUiPage !== 'search') {
             uiRender = <div className="section-testimonials">
                 <br></br>
                 <div className="row" >
@@ -77,5 +78,6 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(Testimonals);
+
+export default withRouter(connect(mapStateToProps)(Testimonals));
 

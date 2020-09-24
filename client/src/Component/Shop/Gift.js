@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import * as actions from '../store/actions';
 import './Shop.css';
+import { withRouter } from 'react-router';
 
 class Gift extends Component {
 
@@ -171,4 +172,5 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Gift);
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Gift));

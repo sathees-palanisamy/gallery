@@ -4,6 +4,7 @@ import Footer from '../Footer/FooterPage';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './Home.CSS';
+import { withRouter } from 'react-router';
 
 const images = [
   { src: "resources/Photos/Header/1.jpeg" },
@@ -173,4 +174,4 @@ const mapDispatchToProps = dispatch => {
 }
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
