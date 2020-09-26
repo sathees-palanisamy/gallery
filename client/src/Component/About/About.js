@@ -137,6 +137,8 @@ class About extends Component {
         let orderHeader;
         let orderTrailer;
 
+        let amountTotal = 0;
+
         var currentdate = new Date(); 
         var OrderID = currentdate.getDate() + ''
                 + (currentdate.getMonth()+1) + ''
@@ -179,7 +181,6 @@ class About extends Component {
 
             }
 
-            let amountTotal = 0;
 
             for (let i = 0; i < this.state.updateOrders.length; i++) {
                 amountTotal = amountTotal + parseInt(this.state.updateOrders[i].imagePrice, 10) * parseInt(this.state.updateOrders[i].quantity, 10)
@@ -256,7 +257,7 @@ class About extends Component {
 
                         <div className="col span-1-of-3">
                             <div >
-                                <p><h3><u>Initial payment:</u></h3></p>Could you please you pay 50% amount of the actual painting cost in below bank Details.
+                                <p><h3><u>Initial payment:</u></h3></p>Could you please you pay  ₹ <span className="price-color">{this.priceFormating(amountTotal/2)}</span> of the actual painting cost in below bank Details.
                             <div>
                                     <p>Account Name: Shri Rangaa</p>
                                     <p>IFSC Code   : IFSC0001 </p>
@@ -464,9 +465,9 @@ class About extends Component {
 <br></br>
                     <div className="row">
 
-<div className="col span-1-of-3">
+<div className="col span-1-of-2">
     <div >
-        <p><u><h3>Initial payment:</h3></u></p>Could you please you pay 50% amount of the actual painting cost in below bank Details.
+        <p><u><h3>Initial payment:</h3></u></p>Could you please you pay ₹ <span className="price-color">{this.priceFormating(amountTotal/2)}</span>  of the actual painting cost in below bank Details.
     <div>
             <p>Account Name: Shri Rangaa</p>
             <p>IFSC Code   : IFSC0001 </p>
@@ -477,22 +478,11 @@ class About extends Component {
 
     </div>
 </div>
-<div className="col span-1-of-3">
-<p><u><h3>Processing Time:</h3></u></p>Please contact us to get exact processing time and tentative shipping time.
+<div className="col span-1-of-2">
+<p><u><h3>Processing Time:</h3></u></p>Please contact us to get exact processing time and collection time.
 <br></br>
 </div>
 
-<div className="col span-1-of-3">
-    <div >
-        <p><u><h3>Shipping Time:</h3></u></p>
-        <p>Within Chennai => 2 days</p>
-        <p>Within Chennai => 2 days</p>
-        <p>Within Tamil Nadu => 3 days</p>
-        <p>Cities => 3 to 4 days</p>
-        <p>Rest of India => 4 to 5 days</p>
-        <p>North east & Jammu => 6 to 7 days</p>
-    </div>
-</div>
 </div>
 
                 </div>
