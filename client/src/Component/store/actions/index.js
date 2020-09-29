@@ -31,3 +31,12 @@ export const updateBasket = (newOrders) => {
     }
 
 }
+
+export const updateSearch = (searchText) => {
+
+    return {
+        type: 'SWITCH_TO_SEARCH',
+        searchText: [...searchText],
+    }
+
+}

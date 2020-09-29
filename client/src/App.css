@@ -94,6 +94,10 @@ section {
   line-height: 145%;
 }
 
+.header-color {
+  color: #C61D3A;
+}
+
 /* ----- ICONS ----- */
 .icon-big {
   font-size: 350%;

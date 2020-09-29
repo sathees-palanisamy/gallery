@@ -9,7 +9,9 @@ class Gift extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {categories: 'Decorative Gift'};
+        this.state = {categories: 'Decorative Gift',
+        
+        };
         this.handleDetailClick = this.handleDetailClick.bind(this);
         this.handleCategoryClick = this.handleCategoryClick.bind(this);
     }
@@ -32,6 +34,20 @@ class Gift extends Component {
             this.props.switchToOthers();
         }
     }
+
+    priceFormating = (inputPrice) => {
+
+        var x = inputPrice;
+        x = x.toString();
+        var lastThree = x.substring(x.length - 3);
+        var otherNumbers = x.substring(0, x.length - 3);
+        if (otherNumbers !== '')
+           lastThree = ',' + lastThree;
+        var res = otherNumbers.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + lastThree;
+  
+        return res
+  
+     }  
 
     render() {
         let renderDisplay;
@@ -73,72 +89,77 @@ class Gift extends Component {
 
 
             <main class="hotel-view">
-                <div class="row gallery-showcase">
+                
+            <div class="row gallery-showcase">
                     <div className="col span-1-of-4 GalleryBoxSize">
                         <figure className="gallery-photo">
-                            <img src="resources/Photos/Header/3.jpeg" alt="Fashion"   />
+                            <img src={this.props.products[2].imageLink} alt="Fashion"   />
                         </figure>
-                        <div className="btn-full">From ₹4,000</div>
-                        <h3>Annam Tanjore</h3>
-                        <div onClick={(e) => this.handleDetailClick("resources/Photos/Header/3.jpeg","Annam Tanjore","4500")}>
-                        <span className="btnshop btn-ghost">More Details</span>
+                        <div className="btn-full">From ₹{this.priceFormating(this.props.products[2].imagePrice)}</div>
+                        <h3>{this.props.products[2].imageHeading}</h3>
+                        <div className="btnshop btn-ghost" onClick={(e) => this.handleDetailClick(this.props.products[2].imageLink,this.props.products[2].imageHeading,this.props.products[2].imagePrice)}>
+                        <span >More Details</span>
                         </div>
                     </div>
+
                     <div className="col span-1-of-4 GalleryBoxSize">
                         <figure className="gallery-photo">
-                            <img src="resources/Photos/Header/4.jpeg" alt="Fashion"   />
+                            <img src={this.props.products[3].imageLink} alt="Fashion"   />
                         </figure>
-                        <div className="btn-full">From ₹4,000</div>
-                        <h3>Peacock Tanjore</h3>
-                        <div onClick={(e) => this.handleDetailClick("resources/Photos/Header/4.jpeg","Peacock Tanjore","4500")}>
-                        <span className="btnshop btn-ghost">More Details</span>
+                        <div className="btn-full">From ₹{this.priceFormating(this.props.products[3].imagePrice)}</div>
+                        <h3>{this.props.products[3].imageHeading}</h3>
+                        <div className="btnshop btn-ghost" onClick={(e) => this.handleDetailClick(this.props.products[3].imageLink,this.props.products[3].imageHeading,this.props.products[3].imagePrice)}>
+                        <span >More Details</span>
                         </div>
                     </div>
+
                     <div className="col span-1-of-4 GalleryBoxSize">
                         <figure className="gallery-photo">
-                            <img src="resources/Photos/Header/7.jpeg" alt="Fashion"   />
+                            <img src={this.props.products[6].imageLink} alt="Fashion"   />
                         </figure>
-                        <div className="btn-full">From ₹4,000</div>
-                        <h3>Peacock Tanjore</h3>
-                        <div onClick={(e) => this.handleDetailClick("resources/Photos/Header/7.jpeg","Peacock Tanjore","4000")}>
-                        <span className="btnshop btn-ghost">More Details</span>
+                        <div className="btn-full">From ₹{this.priceFormating(this.props.products[6].imagePrice)}</div>
+                        <h3>{this.props.products[6].imageHeading}</h3>
+                        <div className="btnshop btn-ghost" onClick={(e) => this.handleDetailClick(this.props.products[6].imageLink,this.props.products[6].imageHeading,this.props.products[6].imagePrice)}>
+                        <span >More Details</span>
                         </div>
                     </div>
+
                     <div className="col span-1-of-4 GalleryBoxSize">
                         <figure className="gallery-photo">
-                            <img src="resources/Photos/Header/10.jpeg" alt="Fashion"   />
+                            <img src={this.props.products[9].imageLink} alt="Fashion"   />
                         </figure>
-                        <div className="btn-full">From ₹4,000</div>
-                        <h3>Elephant Tanjore</h3>
-                        <div onClick={(e) => this.handleDetailClick("resources/Photos/Header/10.jpeg","Elephant Tanjore","4000")}>
-                        <span className="btnshop btn-ghost">More Details</span>
+                        <div className="btn-full">From ₹{this.priceFormating(this.props.products[9].imagePrice)}</div>
+                        <h3>{this.props.products[9].imageHeading}</h3>
+                        <div className="btnshop btn-ghost" onClick={(e) => this.handleDetailClick(this.props.products[9].imageLink,this.props.products[9].imageHeading,this.props.products[9].imagePrice)}>
+                        <span >More Details</span>
                         </div>
                     </div>
                 </div>
-     
+
                 <div class="row gallery-showcase">
-  
- 
                     <div className="col span-1-of-4 GalleryBoxSize">
                         <figure className="gallery-photo">
-                            <img src="resources/Photos/Header/11.jpeg" alt="Fashion"   />
+                            <img src={this.props.products[10].imageLink} alt="Fashion"   />
                         </figure>
-                        <div className="btn-full">From ₹4,000</div>
-                        <h3>Elephant Tanjore</h3>
-                        <div onClick={(e) => this.handleDetailClick("resources/Photos/Header/11.jpeg","Elephant Tanjore","4000")}>
-                        <span className="btnshop btn-ghost">More Details</span>
+                        <div className="btn-full">From ₹{this.priceFormating(this.props.products[10].imagePrice)}</div>
+                        <h3>{this.props.products[10].imageHeading}</h3>
+                        <div className="btnshop btn-ghost" onClick={(e) => this.handleDetailClick(this.props.products[10].imageLink,this.props.products[10].imageHeading,this.props.products[10].imagePrice)}>
+                        <span >More Details</span>
                         </div>
                     </div>
+
+
                     <div className="col span-1-of-4 GalleryBoxSize">
                         <figure className="gallery-photo">
-                            <img src="resources/Photos/Header/13.jpeg" alt="Fashion"   />
+                            <img src={this.props.products[12].imageLink} alt="Fashion"   />
                         </figure>
-                        <div className="btn-full">From ₹4,000</div>
-                        <h3>Peacock Tanjore</h3>
-                        <div onClick={(e) => this.handleDetailClick("resources/Photos/Header/13.jpeg","Peacock Tanjore","4000")}>
-                        <span className="btnshop btn-ghost">More Details</span>
+                        <div className="btn-full">From ₹{this.priceFormating(this.props.products[12].imagePrice)}</div>
+                        <h3>{this.props.products[12].imageHeading}</h3>
+                        <div className="btnshop btn-ghost" onClick={(e) => this.handleDetailClick(this.props.products[12].imageLink,this.props.products[12].imageHeading,this.props.products[12].imagePrice)}>
+                        <span >More Details</span>
                         </div>
                     </div>
+
 
                 </div>
 
@@ -158,7 +179,8 @@ class Gift extends Component {
 const mapStateToProps = (state) => {
     return {
         renderUiPage: state.pageTag.uiPage,
-        renderUiShop: state.pageTag.uiShop
+        renderUiShop: state.pageTag.uiShop,
+        products: state.dataExt,
     }
 }
 

@@ -29,7 +29,7 @@ class Home extends Component {
       uiRender = <div>
 
         <div className="row">
-          <h2>Welcome to Shri Rangaa Tanjore Gallery</h2>
+          <h2 className="header-color"><b>Welcome to Shri Rangaa Tanjore Art Gallery</b></h2>
         </div>
         <div className="row">
 
