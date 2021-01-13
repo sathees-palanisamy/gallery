@@ -42,6 +42,7 @@ const handleSearchClick = (event) => {
         <Auxillary>
           <div className="fixed-nav">
     
+          <img src="resources/favicons/logo.jpg" alt="Kiski logo" className="logo"  />
             <h1>Shri Rangaa Tanjore Art</h1>
          
             <div className="Header-input">
@@ -50,6 +51,7 @@ const handleSearchClick = (event) => {
             </div>
             {mobIcon}
                  <nav>
+                 
                   <ul className="main-nav">
                      <li onClick={handleHomeClick}>
                      <i className="ion-ios-home icon-small "></i>
