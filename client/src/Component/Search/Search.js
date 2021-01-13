@@ -52,7 +52,7 @@ const Search = props => {
 
         if (props.rendersearchText.length > 0) {
             searchArray = props.rendersearchText.map((indiOrder, index) => (
-                <div className="col span-1-of-4 GalleryBoxSize">
+                <div className="product GalleryBoxSize">
                 <figure className="gallery-photo">
                     <img src={indiOrder.imageLink} alt="Fashion"   />
                 </figure>
@@ -102,7 +102,7 @@ const Search = props => {
             </div>
 
             <main class="hotel-view">
-                <div class="row gallery-showcase">
+                <div class="products">
                  {searchArray}
                </div>
             </main>

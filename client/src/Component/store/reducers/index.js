@@ -141,7 +141,7 @@ const dataReducer = () => {
     },
     {
       imageLink: 'resources/Photos/Header/12.jpeg',
-      imageHeading: 'Gaja Lakshmi<',
+      imageHeading: 'Gaja Lakshmi',
       imagePrice: '4000',
     },
     {

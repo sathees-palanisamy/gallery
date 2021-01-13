@@ -26,6 +26,10 @@ const handleSearchClick = (event) => {
     props.updateSearch(searchOrdersLocal)
  }
 
+ const handleHomeClick = (event) => {
+  props.switchToHome();
+ }
+
       let mobIcon;
       if (!props.iconClicked) {
         mobIcon = <img src="resources/favicons/hamburger.png" alt="hamburger logo" className="hamburger" onClick={props.drawerToggleClicked} />
@@ -47,7 +51,7 @@ const handleSearchClick = (event) => {
             {mobIcon}
                  <nav>
                   <ul className="main-nav">
-                     <li>
+                     <li onClick={handleHomeClick}>
                      <i className="ion-ios-home icon-small "></i>
                       <Link to="/">Home</Link>
                      </li>
@@ -86,6 +90,7 @@ const handleSearchClick = (event) => {
   const mapDispatchToProps = dispatch => {
     return {
       updateSearch: (searchText) => dispatch(actions.updateSearch(searchText)),
+      switchToHome: () => dispatch({ type: 'SWITCH_TO_HOME' }),
     }
   }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 
 const Backdrop = (props) => (
   props.show ?
@@ -8,7 +10,7 @@ const Backdrop = (props) => (
         <p><b>South Indian classical art</b></p>
       </div>
       <ul className="side-nav" onClick={props.backDropToggle} >
-        <li>
+        <li onClick={props.switchToHome}>
           <i className="ion-ios-home icon-small"></i>
           <Link to="/">Home</Link>
         </li>
@@ -33,4 +35,10 @@ const Backdrop = (props) => (
     : null
 );
 
-export default Backdrop;
+const mapDispatchToProps = dispatch => {
+  return {
+    switchToHome: () => dispatch({ type: 'SWITCH_TO_HOME' }),
+  }
+}
+
+export default withRouter(connect(null, mapDispatchToProps)(Backdrop));
