@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import * as actions from '../store/actions';
 
+
 class About extends Component {
 
     constructor(props) {
@@ -23,8 +24,8 @@ class About extends Component {
             state: '',
             message: '',
             submitted: false,
-
-        };
+            OrderID: '',
+        }
 
         this.nameChange = this.nameChange.bind(this);
         this.emailChange = this.emailChange.bind(this);
@@ -89,16 +90,210 @@ class About extends Component {
     }
 
 
-    handleSubmit(event) {
-        event.preventDefault();
-        
+    handleSubmit(amountTotal) {
+  
+
+
+        var currentdate = new Date(); 
+
+        var OrderID = currentdate.getDate() + ''
+        + (currentdate.getMonth()+1) + ''
+        + currentdate.getFullYear() + ''
+        + currentdate.getHours() + ''
+        + currentdate.getMinutes() 
+
+        this.setState({ OrderID: OrderID });
+
+        let imageLink1  = ''
+        let imageHeading1  = ''
+        let imagePrice1  = ''
+        let frameSize1  = ''
+        let Quantity1  = ''
+        let imageLink2  = ''
+        let imageHeading2  = ''
+        let imagePrice2  = ''
+        let frameSize2  = ''
+        let Quantity2  = ''
+        let imageLink3  = ''
+        let imageHeading3  = ''
+        let imagePrice3  = ''
+        let frameSize3  = ''
+        let Quantity3  = ''
+        let imageLink4  = ''
+        let imageHeading4  = ''
+        let imagePrice4  = ''
+        let frameSize4  = ''
+        let Quantity4  = ''
+        let imageLink5  = ''
+        let imageHeading5  = ''
+        let imagePrice5  = ''
+        let frameSize5  = ''
+        let Quantity5  = ''
+        let imageLink6  = ''
+        let imageHeading6  = ''
+        let imagePrice6  = ''
+        let frameSize6  = ''
+        let Quantity6  = ''
+        let imageLink7  = ''
+        let imageHeading7  = ''
+        let imagePrice7  = ''
+        let frameSize7  = ''
+        let Quantity7  = ''
+        let imageLink8  = ''
+        let imageHeading8  = ''
+        let imagePrice8  = ''
+        let frameSize8  = ''
+        let Quantity8  = ''
+        let imageLink9  = ''
+        let imageHeading9  = ''
+        let imagePrice9  = ''
+        let frameSize9  = ''
+        let Quantity9= ''
 
         if (this.state.updateOrders.length > 0) {
+
+           imageLink1  =  this.state.updateOrders[0].imageLink;
+           imageHeading1  = this.state.updateOrders[0].imageHeading;
+           imagePrice1  =    this.state.updateOrders[0].imagePrice;
+           frameSize1  =      this.state.updateOrders[0].frameSize;
+           Quantity1  =          this.state.updateOrders[0].quantity;
+        }
+
+        if (this.state.updateOrders.length > 1) {
+
+            imageLink2  =  this.state.updateOrders[1].imageLink;
+             imageHeading2  = this.state.updateOrders[1].imageHeading;
+             imagePrice2  =    this.state.updateOrders[1].imagePrice;
+             frameSize2  =      this.state.updateOrders[1].frameSize;
+             Quantity2  =          this.state.updateOrders[1].quantity;
+        }
+        if (this.state.updateOrders.length > 2) {
+
+             imageLink3  =  this.state.updateOrders[2].imageLink;
+             imageHeading3  = this.state.updateOrders[2].imageHeading;
+             imagePrice3  =    this.state.updateOrders[2].imagePrice;
+             frameSize3  =      this.state.updateOrders[2].frameSize;
+         Quantity3  =          this.state.updateOrders[2].quantity;
+        }
+        if (this.state.updateOrders.length > 3) {
+
+             imageLink4  =  this.state.updateOrders[3].imageLink;
+             imageHeading4  = this.state.updateOrders[3].imageHeading;
+             imagePrice4  =    this.state.updateOrders[3].imagePrice;
+             frameSize4  =      this.state.updateOrders[3].frameSize;
+             Quantity4  =          this.state.updateOrders[3].quantity;
+        }
+        if (this.state.updateOrders.length > 4) {
+
+             imageLink5  =  this.state.updateOrders[4].imageLink;
+             imageHeading5  = this.state.updateOrders[4].imageHeading;
+             imagePrice5  =    this.state.updateOrders[4].imagePrice;
+             frameSize5  =      this.state.updateOrders[4].frameSize;
+             Quantity5  =          this.state.updateOrders[4].quantity;
+        }
+        if (this.state.updateOrders.length > 5) {
+
+             imageLink6  =  this.state.updateOrders[5].imageLink;
+             imageHeading6  = this.state.updateOrders[5].imageHeading;
+             imagePrice6  =    this.state.updateOrders[5].imagePrice;
+             frameSize6  =      this.state.updateOrders[5].frameSize;
+             Quantity6  =          this.state.updateOrders[5].quantity;
+        }
+        if (this.state.updateOrders.length > 6) {
+
+             imageLink7  =  this.state.updateOrders[6].imageLink;
+             imageHeading7  = this.state.updateOrders[6].imageHeading;
+             imagePrice7  =    this.state.updateOrders[6].imagePrice;
+             frameSize7  =      this.state.updateOrders[6].frameSize;
+             Quantity7  =          this.state.updateOrders[6].quantity;
+        }
+        if (this.state.updateOrders.length > 7) {
+
+             imageLink8 =  this.state.updateOrders[7].imageLink;
+             imageHeading8  = this.state.updateOrders[7].imageHeading;
+             imagePrice8  =    this.state.updateOrders[7].imagePrice;
+         frameSize8  =      this.state.updateOrders[7].frameSize;
+             Quantity8  =          this.state.updateOrders[7].quantity;
+        }
+        if (this.state.updateOrders.length > 8) {
+
+             imageLink9  =  this.state.updateOrders[8].imageLink;
+             imageHeading9  = this.state.updateOrders[8].imageHeading;
+             imagePrice9  =    this.state.updateOrders[8].imagePrice;
+             frameSize9  =      this.state.updateOrders[8].frameSize;
+             Quantity9  =          this.state.updateOrders[8].quantity;
+        }
+        
+        if (this.state.updateOrders.length > 0) {
             this.setState({ submitted: true });
+            this.props.requestFetchDecisions(OrderID, this.state.customerName, this.state.emailAddress, 
+                this.state.mobileNo,
+                this.state.house ,
+                this.state.addline1 ,
+                this.state.addline2 ,
+                this.state.postcode ,
+                this.state.city ,
+                this.state.state ,
+                this.state.message ,
+                "progress" ,
+                "0"  ,
+                amountTotal  ,
+                amountTotal  ,
+                imageLink1  ,
+                imageHeading1  ,
+                imagePrice1  ,
+                frameSize1  ,
+                Quantity1  ,    
+             imageLink2  ,
+             imageHeading2  ,
+             imagePrice2  ,
+             frameSize2  ,
+             Quantity2  ,
+             imageLink3  ,
+             imageHeading3  ,
+             imagePrice3  ,
+             frameSize3  ,
+             Quantity3  ,
+             imageLink4  ,
+             imageHeading4  ,
+             imagePrice4  ,
+             frameSize4  ,
+             Quantity4  ,
+             imageLink5  ,
+             imageHeading5  ,
+             imagePrice5  ,
+             frameSize5  ,
+             Quantity5  ,
+             imageLink6  ,
+             imageHeading6  ,
+             imagePrice6  ,
+             frameSize6  ,
+             Quantity6  ,
+             imageLink7  ,
+             imageHeading7  ,
+             imagePrice7  ,
+             frameSize7  ,
+             Quantity7  ,
+             imageLink8  ,
+             imageHeading8  ,
+             imagePrice8  ,
+             frameSize8  ,
+             Quantity8  ,
+             imageLink9  ,
+             imageHeading9  ,
+             imagePrice9  ,
+             frameSize9  ,
+             Quantity9,
+             this.state.appointment
+                );
         } else {
             alert("Basket is empty")
         }
+
+
     }
+
+ 
 
 
     priceFormating = (inputPrice) => {
@@ -219,7 +414,7 @@ class About extends Component {
                     </div>
 
                     <div className="row">
-                        <h3>order ID: {OrderID}</h3>
+                        <h3>order ID: {this.state.OrderID}</h3>
                         <br></br>
                     </div>
 
@@ -310,7 +505,7 @@ class About extends Component {
                     </div>
 
 
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={(e) => this.handleSubmit(amountTotal)}>
 
                         <div className="row">
                             <div className="contact-form">
@@ -421,7 +616,7 @@ class About extends Component {
                     </div>
 
                     <div className="row">
-                        <h3>order ID: {OrderID}</h3>
+                        <h3>order ID: {this.state.OrderID}</h3>
                         <br></br>
                     </div>
 
@@ -496,7 +691,7 @@ class About extends Component {
                         <br></br>
                     </div>
 
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={(e) => this.handleSubmit(amountTotal)}>
 
                         <div className="row">
                             <div className="contact-form">
@@ -606,6 +801,125 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
     return {
         updateBasket: (newOrders) => dispatch(actions.updateBasket(newOrders)),
+        requestFetchDecisions: (orderid, name, Mail, 
+            Mobileno,
+            Doorno ,
+            Addressline1 ,
+            Addressline2 ,
+            Pincode ,
+            City ,
+            State ,
+            Comments ,
+            status ,
+            paid  ,
+            totalamt  ,
+            pendingamt  ,
+            imageLink1  ,
+            imageHeading1  ,
+            imagePrice1  ,
+            frameSize1  ,
+            Quantity1  ,
+            imageLink2  ,
+            imageHeading2  ,
+            imagePrice2  ,
+            frameSize2  ,
+            Quantity2  ,
+            imageLink3  ,
+            imageHeading3  ,
+            imagePrice3  ,
+            frameSize3  ,
+            Quantity3  ,
+            imageLink4  ,
+            imageHeading4  ,
+            imagePrice4  ,
+            frameSize4  ,
+            Quantity4  ,
+            imageLink5  ,
+            imageHeading5  ,
+            imagePrice5  ,
+            frameSize5  ,
+            Quantity5  ,
+            imageLink6  ,
+            imageHeading6  ,
+            imagePrice6  ,
+            frameSize6  ,
+            Quantity6  ,
+            imageLink7  ,
+            imageHeading7  ,
+            imagePrice7  ,
+            frameSize7  ,
+            Quantity7  ,
+            imageLink8  ,
+            imageHeading8  ,
+            imagePrice8  ,
+            frameSize8  ,
+            Quantity8  ,
+            imageLink9  ,
+            imageHeading9  ,
+            imagePrice9  ,
+            frameSize9  ,
+            Quantity9,
+            collection
+            ) => dispatch(actions.fetchDecisions(orderid, name, Mail, 
+                Mobileno,
+                Doorno ,
+                Addressline1 ,
+                Addressline2 ,
+                Pincode ,
+                City ,
+                State ,
+                Comments ,
+                status ,
+                paid  ,
+                totalamt  ,
+                pendingamt  ,
+                imageLink1  ,
+                imageHeading1  ,
+                imagePrice1  ,
+                frameSize1  ,
+                Quantity1  ,
+                imageLink2  ,
+                imageHeading2  ,
+                imagePrice2  ,
+                frameSize2  ,
+                Quantity2  ,
+                imageLink3  ,
+                imageHeading3  ,
+                imagePrice3  ,
+                frameSize3  ,
+                Quantity3  ,
+                imageLink4  ,
+                imageHeading4  ,
+                imagePrice4  ,
+                frameSize4  ,
+                Quantity4  ,
+                imageLink5  ,
+                imageHeading5  ,
+                imagePrice5  ,
+                frameSize5  ,
+                Quantity5  ,
+                imageLink6  ,
+                imageHeading6  ,
+                imagePrice6  ,
+                frameSize6  ,
+                Quantity6  ,
+                imageLink7  ,
+                imageHeading7  ,
+                imagePrice7  ,
+                frameSize7  ,
+                Quantity7  ,
+                imageLink8  ,
+                imageHeading8  ,
+                imagePrice8  ,
+                frameSize8  ,
+                Quantity8  ,
+                imageLink9  ,
+                imageHeading9  ,
+                imagePrice9  ,
+                frameSize9  ,
+                Quantity9,
+                collection
+                )),
     }
 }
 

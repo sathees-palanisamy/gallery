@@ -9,7 +9,8 @@ const initialState = {
     uiShop: '',
     subShop: '',
     order: [],
-    searchText: []
+    searchText: [],
+    errno: ''
 };
 
 // To change the state based on th action reducers 
@@ -78,6 +79,17 @@ const pageReducer = (state = initialState, action) => {
                 imageHeading: action.imageHeading,
                 imagePrice: action.imagePrice
             }
+        case 'API_RESPONSE_MAPPING':
+              return {
+                  ...state,
+                  errno: action.errno
+              }
+          case 'API_RESPONSE_ERROR':
+              return {
+                  ...state,
+                  errno: action.errno,
+                  FetchError: 'Internal Server Error',
+              }
         default:
             return state;
     }

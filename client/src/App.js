@@ -8,6 +8,7 @@ import Shipping from './Component/Shipping/Shipping';
 import Contact from './Component/Contact/Contact';
 import { Route, Switch } from 'react-router-dom';
 import Search from './Component/Search/Search';
+import Order from './Component/orders/order';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 
@@ -94,6 +95,12 @@ class App extends Component {
           />
           <Route path="/search" render={(props) => (
             <Search
+              {...props}
+            />
+          )}
+          />
+          <Route path="/order" render={(props) => (
+            <Order
               {...props}
             />
           )}

@@ -281,6 +281,11 @@ a:active {
   justify-content: space-evenly;
 }
 
+.detail-flex1 {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .col-fex {
   display: flex;
   flex-direction: column;
@@ -477,6 +482,7 @@ a:active {
 
 input[type="text"],
 input[type="email"],
+input[type="password"],
 select,
 textarea {
   width: 100%;
@@ -977,6 +983,8 @@ input[type="submit"]:active {
 /* Small tablet to big tablet: from 768px to 1023px */
 @media only screen and (max-width: 1025px) {
 
+  .contact-form { width: 80%; }
+
   .CategoriesSelect{
     display: none;
   }
@@ -1230,6 +1238,8 @@ input[type="submit"]:active {
 
 /* Small phones: from 0 to 480px */
 @media only screen and (max-width: 480px) {
+
+  .contact-form {width: 100%; }
 
   .CategoriesSelect{
     display: block;
@@ -1701,5 +1711,109 @@ input[type="submit"]:active {
   -webkit-flex-wrap: wrap;
   padding: 12px;
   margin: 0 auto;
+
+}
+
+/* Orders */
+
+.section-plans {
+  background-color: white;
+}
+
+.col-width-1 {
+
+  width: 15%;
+  
+}
+
+.col-width-2 {
+  
+  width: 65%;
+}
+
+.col-width-3 {
+  
+  width: 20%;
+}
+
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child {
+  background-color: #fcfcfc;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px 0;
+}
+
+.iconDisplay {
+  display :flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.plan-price {
+  font-size: 100%;
+  margin-bottom: 10px;
+  font-weight: 100;
+  color: #e67e22;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 100%;
+}
+
+.historyDet {
+  border: 0;
+  font-size: 12.5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  
+  .row1 { padding: 0 2%; }
+}
+
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+ 
+  
+  .row1,
+  .col1 { 
+      width: 100%;
+      margin: 0 0 4% 0;
+  }
+  
+
+  
+}
+
+
+.emailAdd {
+  text-align: center;
+  display: block;
+  color: #d33f25;
 
 }

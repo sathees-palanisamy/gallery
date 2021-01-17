@@ -6,8 +6,7 @@ import { withRouter } from 'react-router';
 class Contact extends Component {
 
 
-      
-
+   
 
     render() {
 

@@ -18,7 +18,6 @@ class Others extends Component {
 
 
     handleDetailClick = (imageLink, imageHeading, imagePrice) => {
-        console.log('in handleDetailClick');
         this.props.updateData(imageLink, imageHeading, imagePrice)
     }
 
@@ -51,12 +50,6 @@ class Others extends Component {
 
     render() {
         let renderDisplay;
-
-       console.log('this.props.products[0]',this.props.products[0]);
-
-       console.log('this.props.products[0].imageLink',this.props.products[0].imageLink);
-
-       console.log('this.props.products[0].imagePrice',this.props.products[0].imagePrice);
         
         renderDisplay =  <div class="container">
         <div class="content">

@@ -18,7 +18,6 @@ class Gift extends Component {
 
 
     handleDetailClick = (imageLink, imageHeading, imagePrice) => {
-        console.log('in handleDetailClick');
         this.props.updateData(imageLink, imageHeading, imagePrice)
     }
     

@@ -22,13 +22,10 @@ class Detail extends Component {
    }
 
    handleBackClick = (event) => {
-      console.log('handleBackClick');
       this.props.switchToShopPage();
    }
 
    handleBasketClick = (imageLink, imageHeading, imagePrice, frameSize,quantity) => {
-      console.log('in handleBasketClick');
-      console.log('frameSize', frameSize);
       this.props.addBasket(imageLink, imageHeading, imagePrice, frameSize,quantity)
    }
 
